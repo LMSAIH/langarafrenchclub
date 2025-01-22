@@ -2,20 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-backgroundPrimary;
 }
+
+nav{
+  @apply w-full bg-white border-b-backgroundSecondary border-b-4 flex flex-col justify-center rounded-lg fixed;
+}
+
+.navbarContainer{
+  @apply  flex flex-row justify-between w-full;
+}
+
+.logoContainer{
+  @apply px-4 py-2;
+}
+.logoContainer>img{
+  @apply w-full;
+}
+.hambNav{
+  @apply mt-auto mb-auto px-4 py-2;
+}
+.hambNav>svg{
+  @apply size-14;
+}
+
+
+.closedNav {
+  @apply h-0 w-full overflow-hidden p-0 duration-500 ease-in-out hidden opacity-0; 
+}
+
+.openNav {
+  @apply h-fit w-full p-2 duration-500 ease-in-out block overflow-auto opacity-100; 
+}
+
+.mobileNavigation{
+  @apply flex justify-center w-full border-t-2 border-t-gray-200 rounded-lg;
+}
+
+.mobileLinkContainer{
+  @apply flex flex-col gap-8 mt-4 mb-4;
+}
+
+.mobileLinkContainer>a{
+  @apply text-lg ;
+}
+
+.computerNavigation{
+  @apply my-auto px-4 py-2 mr-12;
+}
+
+.computerLinkContainer{
+  @apply flex flex-row text-xl gap-x-8;
+}
+
+.computerLinkContainer>a{
+  @apply p-2;
+}
+
+.computerLinkContainer>a:hover{
+  @apply text-gray-500 duration-300 -translate-y-1;
+}
+
