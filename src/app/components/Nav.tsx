@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RiMenu4Fill } from "react-icons/ri";
 import { Inter } from "next/font/google";
 
@@ -16,17 +16,30 @@ const inter = Inter({
 
 const Nav = () => {
 
-
     const [open, setIsOpen] = useState(false);
+    const [visible, setVisible] = useState(true);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
 
     const handleOpen: () => void = (): void => {
         setIsOpen(!open);
     }
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+            setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10)
+            setPrevScrollPos(currentScrollPos)
+        }
+
+        window.addEventListener("scroll", handleScroll)
+
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [prevScrollPos, visible])
+
     return (
-        <nav>
+        <nav className={`transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
             <div className="navbarContainer">
-           
+
                 <div className="logoContainer">
                     <Image src="/LFC_LOGO.png" alt="langara french club logo" width={100} height={100} />
                 </div>
