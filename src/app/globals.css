@@ -4,7 +4,7 @@
 
 
 body {
-  @apply bg-backgroundPrimary overflow-x-hidden;
+  @apply bg-gray-100 overflow-x-hidden;
 }
 
 nav{
@@ -67,81 +67,4 @@ nav{
 
 .computerLinkContainer>a:hover{
   @apply text-gray-500 duration-300 -translate-y-1;
-}
-
-.mainHeader{
-  @apply text-center md:text-4xl text-lg my-auto w-full absolute top-1/2 text-white;
-}
-
-.homeIntroductionContent{
-  @apply w-full relative md:flex md:flex-row md:justify-evenly;
-}
-
-.mainHeaderImageContainer{
-  @apply w-full backdrop-blur-2xl overflow-hidden;
-}
-
-.mainHeaderImageContainer>img{
-  @apply w-full h-auto md:rounded-lg object-cover ;
-}
-
-
-.imageOverlay {
-  @apply relative w-full h-full;
-}
-
-.mainHeaderImageContainer::after {
-  @apply absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent blur-sm opacity-75 ;
-  content: '';
-  z-index: 1;
-}
-
-.aboutUs{
-  @apply relative pt-10 pb-10;
-}
-
-.aboutUsHeaderContainer {
-  @apply flex flex-row justify-center mt-8 mb-0;
-}
-
-.aboutUsAnswerContainer{
-  @apply flex flex-row justify-center mt-0 pb-14 px-1;
-}
-
-.aboutUsHeaderContainerLeft{
-
-  @apply flex flex-row w-fit m-4  pb-8 px-1 pt-1 text-black rounded-lg;
-}
-
-.aboutUsHeaderContainerLeft>h2{
-  @apply m-auto text-xl p-1;
-}
-
-.aboutUsHeaderContainerRight{
-  @apply w-1/2 m-4;
-}
-
-.aboutUsHeaderContainerRight>img{
-  @apply w-full ;
-}
-
-.aboutUsAnswerContainerLeft, .aboutUsAnswerContainerRight{
-  @apply flex flex-row;
-}
-
-.aboutUsAnswerContainerLeft{
-  @apply m-4 w-1/2;
-}
-
-.aboutUsAnswerContainerRight{
-  @apply m-2 w-fit text-black  p-2 rounded-lg;
-}
-
-.aboutUsAnswerContainerRight>p{
-  @apply text-sm;
-}
-
-.aboutUsDecorator{
-  clip-path: ellipse(71% 51% at 49% 36%);
-  @apply absolute top-0 left-0 w-full h-full bg-backgroundFifth -z-10;
 }
