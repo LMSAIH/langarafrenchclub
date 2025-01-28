@@ -13,7 +13,7 @@ const inter = Inter({
   weight: ["400", "500", "700"],
 });
 
-const Homepage = () => {
+const Members = () => {
   useEffect(() => {
     AOS.init({
       duration: 350,
@@ -112,7 +112,7 @@ const Homepage = () => {
                   key={member.id}
                   className="w-5/12 md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
-                 
+                  data-aos-delay={index*50}
                 >
                   <MemberCard member={member} />
                 </div>
@@ -132,6 +132,7 @@ const Homepage = () => {
                   key={member.id}
                   className="w-5/12 md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
+                  data-aos-delay={index*50}
                 >
                   <MemberCard member={member} />
                 </div>
@@ -157,4 +158,4 @@ const Homepage = () => {
   )
 };
 
-export default Homepage;
+export default Members;
