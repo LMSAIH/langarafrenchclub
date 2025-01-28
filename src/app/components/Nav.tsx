@@ -5,14 +5,13 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { RiMenu4Fill } from "react-icons/ri";
 import { Inter } from "next/font/google";
+import { BiHome, BiGroup, BiCalendarEvent, BiHeart, BiPhone } from "react-icons/bi";
 
 const inter = Inter({
     subsets: ["latin"],
     display: "swap",
     weight: ["400", "500"],
 });
-
-
 
 const Nav = () => {
 
@@ -49,21 +48,73 @@ const Nav = () => {
 
                 <div className="computerNavigation hidden sm:block">
                     <div className="computerLinkContainer">
-                        <Link href="/Home"> Home </Link>
-                        <Link href="/Members"> Members </Link>
-                        <Link href="/Events"> Events </Link>
-                        <Link href="/Sponsors"> Sponsors </Link>
-                        <Link href="/Contact"> Contact </Link>
+
+                        <Link href="/">
+                            <div className="linkContainer">
+                                <BiHome className="linkIcon" />
+                                <p> Home </p>
+                            </div>
+                        </Link>
+                        <Link href="/Members">
+                            <div className="linkContainer">
+                                <BiGroup className="linkIcon" />
+                                <p> Members </p>
+                            </div>
+                        </Link>
+                        <Link href="/Events">
+                            <div className="linkContainer">
+                                <BiCalendarEvent className="linkIcon" />
+                                <p> Events </p>
+                            </div>
+                        </Link>
+                        <Link href="/Sponsors">
+                            <div className="linkContainer">
+                                <BiHeart className="linkIcon" />
+                                <p> Sponsors </p>
+                            </div>
+                        </Link>
+                        <Link href="/Contact">
+                            <div className="linkContainer">
+                                <BiPhone className="linkIcon" />
+                                <p> Contact </p>
+                            </div>
+                        </Link>
+                     
                     </div>
                 </div>
             </div>
             <div className={`mobileNavigation ${open ? "openNav" : "closedNav"} `} >
                 <div className={`mobileLinkContainer ${inter.className}`}>
-                    <Link href="/Home"> Home </Link>
-                    <Link href="/Members"> Members </Link>
-                    <Link href="/Events"> Events </Link>
-                    <Link href="/Sponsors"> Sponsors </Link>
-                    <Link href="/Contact"> Contact </Link>
+                <Link href="/">
+                            <div className="linkContainer">
+                                <BiHome className="linkIcon" />
+                                <p> Home </p>
+                            </div>
+                        </Link>
+                        <Link href="/Members">
+                            <div className="linkContainer">
+                                <BiGroup className="linkIcon" />
+                                <p> Members </p>
+                            </div>
+                        </Link>
+                        <Link href="/Events">
+                            <div className="linkContainer">
+                                <BiCalendarEvent className="linkIcon" />
+                                <p> Events </p>
+                            </div>
+                        </Link>
+                        <Link href="/Sponsors">
+                            <div className="linkContainer">
+                                <BiHeart className="linkIcon" />
+                                <p> Sponsors </p>
+                            </div>
+                        </Link>
+                        <Link href="/Contact">
+                            <div className="linkContainer">
+                                <BiPhone className="linkIcon" />
+                                <p> Contact </p>
+                            </div>
+                        </Link>
                 </div>
             </div>
         </nav>
