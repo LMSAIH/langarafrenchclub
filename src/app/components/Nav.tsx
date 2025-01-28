@@ -85,31 +85,31 @@ const Nav = () => {
             </div>
             <div className={`mobileNavigation ${open ? "openNav" : "closedNav"} `} >
                 <div className={`mobileLinkContainer ${inter.className}`}>
-                <Link href="/">
+                <Link href="/" onClick={handleOpen}>
                             <div className="linkContainer">
                                 <BiHome className="linkIcon" />
                                 <p> Home </p>
                             </div>
                         </Link>
-                        <Link href="/Members">
+                        <Link href="/Members" onClick={handleOpen}>
                             <div className="linkContainer">
                                 <BiGroup className="linkIcon" />
                                 <p> Members </p>
                             </div>
                         </Link>
-                        <Link href="/Events">
+                        <Link href="/Events" onClick={handleOpen}>
                             <div className="linkContainer">
                                 <BiCalendarEvent className="linkIcon" />
                                 <p> Events </p>
                             </div>
                         </Link>
-                        <Link href="/Sponsors">
+                        <Link href="/Sponsors" onClick={handleOpen}>
                             <div className="linkContainer">
                                 <BiHeart className="linkIcon" />
                                 <p> Sponsors </p>
                             </div>
                         </Link>
-                        <Link href="/Contact">
+                        <Link href="/Contact" onClick={handleOpen}>
                             <div className="linkContainer">
                                 <BiPhone className="linkIcon" />
                                 <p> Contact </p>
