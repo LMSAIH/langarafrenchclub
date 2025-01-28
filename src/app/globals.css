@@ -7,64 +7,91 @@ body {
   @apply bg-gray-100 overflow-x-hidden;
 }
 
-nav{
-  @apply w-screen min-h-40 h-fit bg-white border-b-backgroundSecondary border-b-4 flex flex-col justify-center rounded-lg fixed top-0 z-50 ;
+nav {
+  @apply w-screen min-h-40 h-fit bg-white border-b-backgroundSecondary border-b-4 flex flex-col justify-center rounded-lg fixed top-0 z-50;
 }
 
-.content{
+.content {
   @apply mt-40 overflow-x-hidden pb-20;
 }
 
-.navbarContainer{
-  @apply  flex flex-row justify-between w-full;
+.navbarContainer {
+  @apply flex flex-row justify-between w-full;
 }
 
-.logoContainer{
+.logoContainer {
   @apply px-4 py-2;
 }
-.logoContainer>img{
+
+.logoContainer>img {
   @apply w-full;
 }
-.hambNav{
+
+.hambNav {
   @apply mt-auto mb-auto px-4 py-2;
 }
-.hambNav>svg{
+
+.hambNav>svg {
   @apply size-14;
 }
 
+.linkContainer{
+  @apply flex-row flex justify-center ;
+}
+
+.linkContainer>p{
+  @apply m-auto ml-2;
+}
+
+
+
+.linkIcon{
+  @apply m-auto size-10;
+}
 
 .closedNav {
-  @apply h-0 w-full overflow-hidden p-0 duration-500 ease-in-out hidden opacity-0; 
+  @apply h-0 w-full overflow-hidden p-0 duration-500 ease-in-out hidden opacity-0;
 }
 
 .openNav {
-  @apply h-fit w-full p-2 duration-500 ease-in-out block overflow-auto opacity-100; 
+  @apply h-fit w-full p-2 duration-500 ease-in-out block overflow-auto opacity-100;
 }
 
-.mobileNavigation{
+.mobileNavigation {
   @apply flex justify-center w-full border-t-2 border-t-gray-200 rounded-lg;
 }
 
-.mobileLinkContainer{
+.mobileLinkContainer {
   @apply flex flex-col gap-8 mt-4 mb-4;
 }
 
-.mobileLinkContainer>a{
-  @apply text-lg ;
+.mobileLinkContainer>a {
+  @apply text-lg;
 }
 
-.computerNavigation{
+.computerNavigation {
   @apply my-auto px-4 py-2 mr-12;
 }
 
-.computerLinkContainer{
+.computerLinkContainer {
   @apply flex flex-row text-xl gap-x-8;
 }
 
-.computerLinkContainer>a{
+.computerLinkContainer>a {
   @apply p-2;
 }
 
-.computerLinkContainer>a:hover{
+.computerLinkContainer>a:hover {
   @apply text-gray-500 duration-300 -translate-y-1;
+}
+
+
+
+.french-border {
+  border-left: 4px solid #002654;
+  border-right: 4px solid #ED2939;
+}
+
+.card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
