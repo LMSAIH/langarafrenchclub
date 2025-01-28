@@ -16,8 +16,8 @@ const inter = Inter({
 const Homepage = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
-      once: true,
+      duration: 350,
+      once: false,
     });
   }, []);
 
@@ -94,7 +94,7 @@ const Homepage = () => {
       <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="w-full mx-auto">
           <h1
-            className={`${inter.className} french-accent text-center text-4xl md:text-5xl font-bold text-blue-900 mb-16`}
+            className={`${inter.className} french-accent text-center text-3xl md:text-5xl  font-bold text-blue-900 mb-16`}
             data-aos="fade-down"
           >
             Voici notre incroyable équipe !
@@ -112,7 +112,7 @@ const Homepage = () => {
                   key={member.id}
                   className="w-5/12 md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
-                  data-aos-delay={index * 100}
+                 
                 >
                   <MemberCard member={member} />
                 </div>
@@ -120,7 +120,7 @@ const Homepage = () => {
             </div>
           </section>
 
-          <section className="mt-24 french-border p-8 bg-white rounded-lg shadow-lg" data-aos="fade-up">
+          <section className="mt-24 french-border p-8 bg-white rounded-lg shadow-lg" data-aos="fade-up" >
             <h2
               className={`${inter.className} french-accent text-center text-3xl md:text-4xl font-semibold text-red-700 mb-12`}
             >
@@ -132,7 +132,6 @@ const Homepage = () => {
                   key={member.id}
                   className="w-5/12 md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
-                  data-aos-delay={index * 100}
                 >
                   <MemberCard member={member} />
                 </div>
@@ -142,7 +141,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="relative h-48">
+      <div className="relative h-48 bg-white">
         <svg
           className="absolute bottom-0 w-full h-48 -mb-1 text-blue-900"
           preserveAspectRatio="none"
