@@ -64,8 +64,8 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-between mt-20" data-aos="fade-up-left">
-            <Image src="/Answer_image.svg" alt="answer image" width={100} height={100} className="mb-4 md:mb-0 md:relative md:w-1/2 absolute  top-1/4 w-full" />
-            <p className="text-xl md:text-2xl text-white bg-black bg-opacity-40 md:bg-opacity-100 md:ml-8 p-4 rounded-md md:rounded-md md:p-6 md:bg-red-600  " 
+            <Image src="/Answer_image.svg" alt="answer image" width={100} height={100} className="mb-4 md:mb-0 md:relative md:w-1/2 absolute md:block hidden  top-1/4 w-full" />
+            <p className="text-xl md:text-2xl text-white bg-red bg-opacity-40 md:bg-opacity-100 md:ml-8 p-4 rounded-md md:rounded-md md:p-6 md:bg-red-600  " 
             data-aos="zoom-y-out" data-aos-delay="100">
               Nous sommes une organisation dirigée par des étudiants, dédiée à la diffusion de la langue et de la
               culture françaises. Basés au Collège Langara, nous organisons régulièrement des événements pour aider les
