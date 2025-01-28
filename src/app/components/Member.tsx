@@ -38,7 +38,7 @@ export default function MemberCard({ member }: MemberCardProps) {
 
                     <TransitionChild
                         as={Fragment}
-                        enter="ease-out duration-300"
+                        enter="ease-out duration-200"
                         enterFrom="opacity-0"
                         enterTo="opacity-100"
                         leave="ease-in duration-200"
