@@ -1,5 +1,6 @@
+
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { LanguageProvider } from "./context/LanguageContext";
 import "./globals.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -14,14 +15,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Nav />
-        <div className="content">
-          {children}
-        </div>
-        <Footer /> 
-      </body>
-    </html>
+    <LanguageProvider >
+      <html lang="en">
+        <body>
+          <Nav />
+          <div className="content">
+            {children}
+          </div>
+          <Footer />
+        </body>
+      </html>
+    </LanguageProvider>
   );
 }
