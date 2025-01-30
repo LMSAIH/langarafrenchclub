@@ -6,6 +6,8 @@ import MemberCard from "../components/Member";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import  MembersContent  from "../PageContent/MembersContent";
+import { useLanguage } from "../context/LanguageContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,60 +23,8 @@ const Members = () => {
     });
   }, []);
 
-  const currentExecs: Member[] = [
-    {
-      id: 1,
-      name: "Aurora Miller",
-      role: "Vice-President",
-      bio: "Blablabla",
-      imageUrl: "/CONSAR1.jpg",
-    },
-    {
-      id: 2,
-      name: "Amar Miller",
-      role: "President",
-      bio: "Blablabla",
-      imageUrl: "/CONSAR1.jpg",
-    },
-    {
-      id: 3,
-      name: "Joseph Miller",
-      role: "Director of events",
-      bio: "Blablabla",
-      imageUrl: "/CONSAR1.jpg",
-    },
-    {
-      id: 4,
-      name: "Joseph Miller",
-      role: "Director of events",
-      bio: "Blablabla",
-      imageUrl: "/CONSAR1.jpg",
-    },
-    {
-      id: 5,
-      name: "Joseph Miller",
-      role: "Director of events",
-      bio: "Blablabla",
-      imageUrl: "/CONSAR1.jpg",
-    },
-    {
-      id: 6,
-      name: "Joseph Miller",
-      role: "Director of events",
-      bio: "Blablabla",
-      imageUrl: "/CONSAR1.jpg",
-    },
-  ];
-
-  const oldExecs: Member[] = [
-    {
-      id: 1,
-      name: "Aurora Miller",
-      role: "Vice-President",
-      bio: "Blablabla",
-      imageUrl: "/CONSAR1.jpg",
-    },
-  ];
+  const {language} = useLanguage();
+  const content = MembersContent[language];
 
   return (
     <div className={`${inter.className} min-h-screen`}>
@@ -97,24 +47,24 @@ const Members = () => {
             className={`${inter.className} french-accent text-center text-3xl md:text-5xl  font-bold text-blue-900 mb-16`}
             data-aos="fade-down"
           >
-            Voici notre incroyable équipe !
+            {content.teamIntro}
           </h1>
 
           <section className="mb-24 french-border p-8 bg-white rounded-lg shadow-lg" data-aos="fade-up">
             <h2
               className={`${inter.className} french-accent text-center text-3xl md:text-4xl font-semibold text-red-700 mb-12`}
             >
-              Les dirigeants actuels du club
+              {content.currentExecsTitle}
             </h2>
             <div className="flex flex-wrap justify-center items-stretch w-full h-fit mx-auto mt-10 gap-x-4 gap-y-10">
-              {currentExecs.map((member, index) => (
+              {content.currentExecs.map((member, index) => (
                 <div
-                  key={member.id}
+                  key={`member ${index}`}
                   className="w-5/12 md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
                   data-aos-delay={index*50}
                 >
-                  <MemberCard member={member} />
+                  <MemberCard member={{...member, id:index}} />
                 </div>
               ))}
             </div>
@@ -124,17 +74,17 @@ const Members = () => {
             <h2
               className={`${inter.className} french-accent text-center text-3xl md:text-4xl font-semibold text-red-700 mb-12`}
             >
-              Les anciens dirigeants du club
+              {content.oldExecsTitle}
             </h2>
             <div className="flex flex-wrap justify-center items-stretch w-full h-fit mx-auto mt-10 gap-x-4 gap-y-10">
-              {oldExecs.map((member, index) => (
+              {content.oldExecs.map((member, index) => (
                 <div
-                  key={member.id}
+                  key={`member ${index}`}
                   className="w-5/12 md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
                   data-aos-delay={index*50}
                 >
-                  <MemberCard member={member} />
+                  <MemberCard member={{...member, id: index}} />
                 </div>
               ))}
             </div>
