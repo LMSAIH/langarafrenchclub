@@ -1,3 +1,5 @@
+"use client"
+
 import type React from "react"
 import { Dialog, DialogPanel, TransitionChild, Transition  } from "@headlessui/react"
 import { Fragment } from "react"
