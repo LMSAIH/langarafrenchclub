@@ -14,7 +14,6 @@ export default function MemberCard({ member }: MemberCardProps) {
 
     const openModal = () => setIsOpen(true);
     const closeModal = () => setIsOpen(false);
-
     return (
         <div className="relative group w-full h-full ">
 
