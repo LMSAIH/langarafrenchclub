@@ -14,6 +14,7 @@ const inter = Inter({
   weight: ["400", "500", "700"],
 })
 
+
 const events: Event[] = [
   {
     id: 1,
