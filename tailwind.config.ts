@@ -13,8 +13,12 @@ export default {
         backgroundSecondary: "#3B4B78",
         backgroundThird: "#B53B5C",
         backgroundFourth: "#D0616B",
-        backgroundFifth: "#E3AF97"
-        
+        backgroundFifth: "#E3AF97",
+      },
+      screens: {
+        "3xl": "1920px",
+        "4xl": "2560px",
+        "5xl": "3840px",
       },
     },
   },
