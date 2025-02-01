@@ -76,15 +76,15 @@ export default function Sponsors() {
       </div>
 
       <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl 4xl:max-w-full 4xl:w-3/4 mx-auto">
           <h1
-            className={`${inter.className} french-accent text-center text-4xl md:text-5xl font-bold text-blue-900 mb-8`}
+            className={`${inter.className} french-accent text-center text-4xl 4xl:text-8xl md:text-5xl font-bold text-blue-900 mb-8`}
             data-aos="fade-down"
           >
             Nos Généreux Sponsors
           </h1>
 
-          <p className="text-center text-xl text-gray-700 mb-16" data-aos="fade-up">
+          <p className="text-center text-xl text-gray-700 4xl:text-5xl mb-16" data-aos="fade-up">
             Nous tenons à exprimer notre profonde gratitude envers nos sponsors pour leur soutien inestimable. Grâce à
             leur générosité, nous pouvons continuer à promouvoir la langue et la culture françaises au sein de notre
             communauté.
@@ -110,7 +110,7 @@ export default function Sponsors() {
             ))}
           </div>
 
-          <p className="text-center text-lg text-gray-600" data-aos="fade-up">
+          <p className="text-center text-lg 4xl:text-5xl text-gray-600" data-aos="fade-up">
             Cliquez sur un logo pour en savoir plus sur nos merveilleux sponsors.
           </p>
         </div>
