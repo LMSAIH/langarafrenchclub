@@ -1,0 +1,113 @@
+const EventsContent = {
+    en: {
+      title: "Our Past Events",
+      categories: ["All", "Culture", "Cuisine", "Language", "Gastronomy"],
+      events: [
+        {
+          id: 1,
+          title: "French Cinema Night",
+          date: "June 15, 2023",
+          description: "A screening of the movie 'Amélie' followed by a lively discussion on French cinema.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Culture",
+        },
+        {
+          id: 2,
+          title: "Cooking Workshop: Macarons",
+          date: "July 22, 2023",
+          description: "Learn to prepare delicious French macarons with our guest pastry chef.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Cuisine",
+        },
+        {
+          id: 3,
+          title: "French Conversation",
+          date: "August 5, 2023",
+          description: "Practice your French in a relaxed atmosphere with native speakers.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Language",
+        },
+        {
+          id: 4,
+          title: "Virtual Tour of the Louvre",
+          date: "September 18, 2023",
+          description: "Explore the treasures of the Louvre in an exclusive virtual guided tour.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Culture",
+        },
+        {
+          id: 5,
+          title: "French Wine Tasting",
+          date: "October 30, 2023",
+          description: "Discover a selection of fine French wines paired with assorted cheeses.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Gastronomy",
+        },
+        {
+          id: 6,
+          title: "French Music Concert",
+          date: "November 12, 2023",
+          description: "Enjoy an evening of classical and contemporary French music.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Culture",
+        },
+      ],
+    },
+    fr: {
+      title: "Nos Événements Passés",
+      categories: ["Tous", "Culture", "Cuisine", "Langue", "Gastronomie"],
+      events: [
+        {
+          id: 1,
+          title: "Soirée Cinéma Français",
+          date: "15 Juin 2023",
+          description: "Une projection du film 'Amélie' suivie d'une discussion animée sur le cinéma français.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Culture",
+        },
+        {
+          id: 2,
+          title: "Atelier de Cuisine: Macarons",
+          date: "22 Juillet 2023",
+          description: "Apprenez à préparer de délicieux macarons français avec notre chef pâtissier invité.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Cuisine",
+        },
+        {
+          id: 3,
+          title: "Conversation en Français",
+          date: "5 Août 2023",
+          description: "Pratiquez votre français dans une ambiance décontractée avec des locuteurs natifs.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Langue",
+        },
+        {
+          id: 4,
+          title: "Visite Virtuelle du Louvre",
+          date: "18 Septembre 2023",
+          description: "Explorez les trésors du Louvre lors d'une visite virtuelle guidée exclusive.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Culture",
+        },
+        {
+          id: 5,
+          title: "Dégustation de Vins Français",
+          date: "30 Octobre 2023",
+          description: "Découvrez une sélection de vins français fins, accompagnés de fromages assortis.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Gastronomie",
+        },
+        {
+          id: 6,
+          title: "Concert de Musique Française",
+          date: "12 Novembre 2023",
+          description: "Profitez d'une soirée de musique française classique et contemporaine.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Culture",
+        },
+      ],
+    },
+  }
+  
+  export default EventsContent
+  
