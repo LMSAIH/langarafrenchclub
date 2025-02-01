@@ -84,9 +84,9 @@ const Nav = () => {
 
                     </div>
                 </div>
-                <button className={`${inter.className} bg-none border-2 border-black border-solid p-2 my-auto mr-10 h-fit text-lg rounded-lg flex flex-row hover:bg-black
+                <button className={`${inter.className} bg-none border-2 4xl:border-4 border-black border-solid p-2 my-auto mr-10 4xl:mr-20 h-fit text-lg 4xl:text-5xl text-center rounded-lg flex flex-row hover:bg-black
                 hover:text-white hover:border-white duration-300`} onClick={()=>{setLanguage(language === 'en' ? 'fr' : 'en')}} >
-                    <BiWorld className="my-auto mx-1 size-6" />
+                    <BiWorld className="my-auto mx-1 size-6 4xl:size-16" />
                     {language.toUpperCase()}
                 </button>
                 <div className="hambNav sm:hidden">
