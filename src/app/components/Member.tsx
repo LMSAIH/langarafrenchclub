@@ -18,7 +18,7 @@ export default function MemberCard({ member }: MemberCardProps) {
         <div className="relative group w-full h-full ">
 
             <div
-                className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-105 h-full"
+                className="bg-white shadow-lg rounded-lg 4xl:rounded-xl overflow-hidden cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-105 h-full"
                 onClick={openModal}
             >
                 <img
@@ -27,8 +27,8 @@ export default function MemberCard({ member }: MemberCardProps) {
                     className="w-full h-fit object-cover object-center"
                 />
                 <div className="p-4 ">
-                    <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
-                    <p className="text-sm text-gray-600">{member.role}</p>
+                    <h3 className="text-xl 4xl:text-5xl font-semibold text-gray-800">{member.name}</h3>
+                    <p className="text-sm 4xl:text-3xl text-gray-600">{member.role}</p>
                 </div>
             </div>
 
@@ -61,23 +61,23 @@ export default function MemberCard({ member }: MemberCardProps) {
                                 <DialogPanel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
 
                                     <div className="flex justify-between items-center">
-                                        <h3 className="text-lg font-medium leading-6 text-gray-900">{member.name}</h3>
+                                        <h3 className="text-lg 4xl:text-4xl font-medium leading-6 text-gray-900">{member.name}</h3>
                                         <button
                                             onClick={closeModal}
                                             className="text-gray-500 hover:text-gray-700"
                                         >
-                                            <X size={24} />
+                                            <X size={24} className="4xl:size-14" />
                                         </button>
                                     </div>
 
                                     <div className="mt-2">
-                                        <p className="text-sm text-gray-500">{member.bio}</p>
+                                        <p className="text-sm text-gray-500 4xl:text-3xl">{member.bio}</p>
                                     </div>
 
                                     <div className="mt-4 flex justify-end">
                                         <button
                                             type="button"
-                                            className="rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                                            className="rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm 4xl:text-3xl font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                                             onClick={closeModal}
                                         >
                                             Fermer
