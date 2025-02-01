@@ -1,7 +1,6 @@
 "use client";
 
 import { Inter } from "next/font/google";
-import type { Member } from "../types/member";
 import MemberCard from "../components/Member";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -44,7 +43,7 @@ const Members = () => {
       <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="w-full mx-auto">
           <h1
-            className={`${inter.className} french-accent text-center text-3xl md:text-5xl  font-bold text-blue-900 mb-16`}
+            className={`${inter.className} french-accent text-center text-3xl md:text-5xl 4xl:text-8xl font-bold text-blue-900 mb-16`}
             data-aos="fade-down"
           >
             {content.teamIntro}
@@ -52,7 +51,7 @@ const Members = () => {
 
           <section className="mb-24 french-border p-8 bg-white rounded-lg shadow-lg" data-aos="fade-up">
             <h2
-              className={`${inter.className} french-accent text-center text-3xl md:text-4xl font-semibold text-red-700 mb-12`}
+              className={`${inter.className} french-accent text-center text-3xl md:text-4xl 4xl:text-7xl font-semibold text-red-700 mb-12`}
             >
               {content.currentExecsTitle}
             </h2>
@@ -72,7 +71,7 @@ const Members = () => {
 
           <section className="mt-24 french-border p-8 bg-white rounded-lg shadow-lg" data-aos="fade-up" >
             <h2
-              className={`${inter.className} french-accent text-center text-3xl md:text-4xl font-semibold text-red-700 mb-12`}
+              className={`${inter.className} french-accent text-center text-3xl md:text-4xl 4xl:text-7xl font-semibold text-red-700 mb-12`}
             >
               {content.oldExecsTitle}
             </h2>
