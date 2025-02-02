@@ -7,6 +7,8 @@ import AOS from "aos"
 import "aos/dist/aos.css"
 import SponsorModal from "../components/SponsorModal"
 import type { Sponsor } from "../types/sponsor"
+import { useLanguage } from "../context/LanguageContext"
+import sponsorsContent from "../PageContent/SponsorsContent"
 
 
 const inter = Inter({
@@ -51,8 +53,10 @@ const sponsors: Sponsor[] = [
 ]
 
 export default function Sponsors() {
-  const [selectedSponsor, setSelectedSponsor] = useState<Sponsor | null>(null)
-
+  const [selectedSponsor, setSelectedSponsor] = useState<Sponsor | null>(null);
+  const {language} = useLanguage();
+  const content = sponsorsContent[language];
+  
   useEffect(() => {
     AOS.init({
       duration: 300,
@@ -81,17 +85,15 @@ export default function Sponsors() {
             className={`${inter.className} french-accent text-center text-4xl 4xl:text-8xl md:text-5xl font-bold text-blue-900 mb-8`}
             data-aos="fade-down"
           >
-            Nos Généreux Sponsors
+            {content.pageContent.title}
           </h1>
 
           <p className="text-center text-xl text-gray-700 4xl:text-5xl mb-16" data-aos="fade-up">
-            Nous tenons à exprimer notre profonde gratitude envers nos sponsors pour leur soutien inestimable. Grâce à
-            leur générosité, nous pouvons continuer à promouvoir la langue et la culture françaises au sein de notre
-            communauté.
+            {content.pageContent.description}
           </p>
 
           <div className="flex flex-wrap flex-row justify-center wrap gap-12 mb-16 w-full">
-            {sponsors.map((sponsor, index) => (
+            {content.sponsors.map((sponsor, index) => (
               <div
                 key={sponsor.id}
                 className="w-3/4 md:w-1/3 flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-110"
@@ -111,7 +113,7 @@ export default function Sponsors() {
           </div>
 
           <p className="text-center text-lg 4xl:text-5xl text-gray-600" data-aos="fade-up">
-            Cliquez sur un logo pour en savoir plus sur nos merveilleux sponsors.
+            {content.pageContent.clickPrompt}
           </p>
         </div>
       </div>
