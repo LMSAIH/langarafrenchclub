@@ -4,6 +4,8 @@ import { Inter } from "next/font/google"
 import { useState, useEffect } from "react"
 import { useForm, type SubmitHandler } from "react-hook-form"
 import { Mail, Phone, MapPin } from "lucide-react"
+import { useLanguage } from "../context/LanguageContext"
+import contactContent from "../PageContent/ContactContent"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
@@ -21,12 +23,17 @@ type FormInputs = {
 }
 
 export default function Contact() {
+
+  const {language} = useLanguage();
+  const content = contactContent[language];
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm<FormInputs>()
+
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   useEffect(() => {
@@ -43,6 +50,8 @@ export default function Contact() {
     reset()
     setTimeout(() => setIsSubmitted(false), 5000)
   }
+
+  
 
   return (
     <div className={`${inter.className} min-h-screen`}>
@@ -65,7 +74,7 @@ export default function Contact() {
             className={`${inter.className} french-accent text-center text-4xl md:text-5xl 4xl:text-8xl font-bold text-blue-900 mb-8`}
             data-aos="fade-down"
           >
-            Contactez-nous
+            {content.title}
           </h1>
 
           <div className="flex flex-wrap -mx-4">
@@ -73,7 +82,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit(onSubmit)} className="bg-gray-100 p-6 rounded-lg shadow-md">
                 <div className="mb-4">
                   <label htmlFor="name" className="block text-gray-700 4xl:text-4xl font-bold mb-2">
-                    Nom
+                    {content.form.nameLabel}
                   </label>
                   <input
                     type="text"
@@ -85,7 +94,7 @@ export default function Contact() {
                 </div>
                 <div className="mb-4">
                   <label htmlFor="email" className="block 4xl:text-4xl text-gray-700 font-bold mb-2">
-                    Email
+                    {content.form.emailLabel}
                   </label>
                   <input
                     type="email"
@@ -103,7 +112,7 @@ export default function Contact() {
                 </div>
                 <div className="mb-4">
                   <label htmlFor="message" className="block 4xl:text-4xl text-gray-700 font-bold mb-2">
-                    Message
+                    {content.form.messageLabel}
                   </label>
                   <textarea
                     id="message"
@@ -117,36 +126,36 @@ export default function Contact() {
                   type="submit"
                   className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-md 4xl:text-4xl hover:bg-blue-700 transition-colors duration-300"
                 >
-                  Envoyer
+                  {content.form.submitButton}
                 </button>
               </form>
               {isSubmitted && (
                 <div className="mt-4 p-4 bg-green-100 text-green-700 rounded-md 4xl:text-4xl" data-aos="fade-in">
-                  Merci pour votre message ! Nous vous répondrons bientôt.
+                  {content.form.successMessage}
                 </div>
               )}
             </div>
             <div className="w-full lg:w-1/2 px-4" data-aos="fade-left">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6 4xl:text-8xl">Informations de contact</h2>
+                <h2 className="text-2xl font-bold text-gray-800 mb-6 4xl:text-8xl">{content.contactInfo.heading}</h2>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <Mail className="text-blue-600 mr-4 4xl:size-20" />
-                    <span className="4xl:text-4xl">contact@clubfrancais.com</span>
+                    <span className="4xl:text-4xl">{content.contactInfo.email}</span>
                   </div>
                   <div className="flex items-center">
                     <Phone className="text-blue-600 mr-4 4xl:size-20" />
-                    <span className="4xl:text-4xl">+1 (123) 456-7890</span>
+                    <span className="4xl:text-4xl">{content.contactInfo.phone}</span>
                   </div>
                   <div className="flex items-center">
                     <MapPin className="text-blue-600 mr-4 4xl:size-20" />
-                    <span className="4xl:text-4xl">100 West 49th Avenue, Vancouver, BC V5Y 2Z6</span>
+                    <span className="4xl:text-4xl">{content.contactInfo.address}</span>
                   </div>
                 </div>
                 <div className="mt-8">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4 4xl:text-4xl">Heures d'ouverture</h3>
-                  <p className="4xl:text-4xl">Lundi - Vendredi: 9h00 - 17h00</p>
-                  <p className="4xl:text-4xl">Samedi - Dimanche: Fermé</p>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4 4xl:text-4xl">{content.contactInfo.openingHours}</h3>
+                  <p className="4xl:text-4xl">{content.contactInfo.weekdayHours}</p>
+                  <p className="4xl:text-4xl">{content.contactInfo.weekendHours}</p>
                 </div>
               </div>
             </div>
