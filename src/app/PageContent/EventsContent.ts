@@ -39,7 +39,7 @@ const EventsContent = {
           id: 5,
           title: "French Wine Tasting for February",
           date: "October 30, 2023",
-          description: "Discover a selection of fine French wines paired with assorted cheeses.",
+          description: "Discover a selection of fine French wines paired with assorted cheeses just for you.",
           imageUrl: "/CONSAR1.jpg",
           category: "Gastronomy",
         },
