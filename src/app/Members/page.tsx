@@ -5,7 +5,7 @@ import MemberCard from "../components/Member";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import  MembersContent  from "../PageContent/MembersContent";
+import MembersContent from "../PageContent/MembersContent";
 import { useLanguage } from "../context/LanguageContext";
 
 const inter = Inter({
@@ -22,7 +22,7 @@ const Members = () => {
     });
   }, []);
 
-  const {language} = useLanguage();
+  const { language } = useLanguage();
   const content = MembersContent[language];
 
   return (
@@ -49,11 +49,37 @@ const Members = () => {
             {content.teamIntro}
           </h1>
 
+          <p className="text-center text-lg 4xl:text-5xl mt-5 mb-5 text-gray-600" data-aos="fade-up">
+                Click on the member's card to view more information about them.
+              </p>
+
           <section className="mb-24 french-border p-8 bg-white rounded-lg shadow-lg" data-aos="fade-up">
             <h2
               className={`${inter.className} french-accent text-center text-3xl md:text-4xl 4xl:text-7xl font-semibold text-red-700 mb-12`}
             >
-              {content.currentExecsTitle}
+              Club founders
+            </h2>
+           
+            <div className="flex flex-wrap justify-center items-stretch w-full h-fit mx-auto mt-10 gap-x-4 gap-y-10">
+             
+              {content.clubFounders.map((member, index) => (
+                <div
+                  key={`member ${index}`}
+                  className="w-5/12 md:w-1/4 lg:w-1/6 flex justify-center"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 50}
+                >
+                  <MemberCard member={{ ...member, id: index }} />
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mb-24 french-border p-8 bg-white rounded-lg shadow-lg" data-aos="fade-up">
+            <h2
+              className={`${inter.className} french-accent text-center text-3xl md:text-4xl 4xl:text-7xl font-semibold text-red-700 mb-12`}
+            >
+              Current Club Operators and Leaders
             </h2>
             <div className="flex flex-wrap justify-center items-stretch w-full h-fit mx-auto mt-10 gap-x-4 gap-y-10">
               {content.currentExecs.map((member, index) => (
@@ -61,9 +87,9 @@ const Members = () => {
                   key={`member ${index}`}
                   className="w-5/12 md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
-                  data-aos-delay={index*50}
+                  data-aos-delay={index * 50}
                 >
-                  <MemberCard member={{...member, id:index}} />
+                  <MemberCard member={{ ...member, id: index }} />
                 </div>
               ))}
             </div>
@@ -73,7 +99,7 @@ const Members = () => {
             <h2
               className={`${inter.className} french-accent text-center text-3xl md:text-4xl 4xl:text-7xl font-semibold text-red-700 mb-12`}
             >
-              {content.oldExecsTitle}
+              Former Club Operators and Leaders
             </h2>
             <div className="flex flex-wrap justify-center items-stretch w-full h-fit mx-auto mt-10 gap-x-4 gap-y-10">
               {content.oldExecs.map((member, index) => (
@@ -81,9 +107,9 @@ const Members = () => {
                   key={`member ${index}`}
                   className="w-5/12 md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
-                  data-aos-delay={index*50}
+                  data-aos-delay={index * 50}
                 >
-                  <MemberCard member={{...member, id: index}} />
+                  <MemberCard member={{ ...member, id: index }} />
                 </div>
               ))}
             </div>
