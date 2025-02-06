@@ -4,7 +4,7 @@ const MembersContent = {
     oldExecsTitle: "Former Club Leaders",
     teamIntro: "Here is our amazing team!",
     close: "Close",
-    currentExecs: [
+    clubFounders: [
       {
         name: "Aurora Miller",
         role: "Vice-President",
@@ -20,6 +20,20 @@ const MembersContent = {
       {
         name: "Joseph Miller",
         role: "Director of events",
+        bio: "Blablabla",
+        imageUrl: "/CONSAR1.jpg",
+      },
+    ],
+    currentExecs: [
+      {
+        name: "Aurora Miller",
+        role: "Vice-President",
+        bio: "Blablabla",
+        imageUrl: "/CONSAR1.jpg",
+      },
+      {
+        name: "Amar Miller",
+        role: "President",
         bio: "Blablabla",
         imageUrl: "/CONSAR1.jpg",
       },
@@ -56,6 +70,26 @@ const MembersContent = {
     currentExecsTitle: "Les dirigeants actuels du club",
     oldExecsTitle: "Les anciens dirigeants du club",
     teamIntro: "Voici notre incroyable équipe !",
+    clubFounders: [
+      {
+        name: "Aurora Miller",
+        role: "Vice-Président",
+        bio: "Blablabla",
+        imageUrl: "/CONSAR1.jpg",
+      },
+      {
+        name: "Amar Miller",
+        role: "Président",
+        bio: "Blablabla",
+        imageUrl: "/CONSAR1.jpg",
+      },
+      {
+        name: "Joseph Miller",
+        role: "Directeur des événements",
+        bio: "Blablabla",
+        imageUrl: "/CONSAR1.jpg",
+      },
+    ],
     currentExecs: [
       {
         name: "Aurora Miller",
