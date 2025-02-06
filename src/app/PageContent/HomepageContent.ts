@@ -1,4 +1,6 @@
 
+
+
 const HomepageContent = {
     en: {
       title: "Welcome to the Langara French Club",
@@ -26,14 +28,22 @@ const HomepageContent = {
       testimonialsTitle: "Testimonials",
       testimonials: [
         {
-          quote:
-            "The Langara French Club helped me gain confidence in speaking French. It's an amazing community!",
-          author: "Sarah L.",
+          name:"Axel Velasquez",
+          role:"Computer Support Specialist",
+          content:"I love the French Club at Langara! It's a great way to meet new people and practice my French.",
+          avatar:"/CONSAR1.jpg"
         },
         {
-          quote:
-            "The cultural events organized by the club allowed me to discover the richness of French culture.",
-          author: "Michael T.",
+          name:"Fernando Salazar ",
+          role:"Langara College Instructor",
+          content:"I love the French Club at Langara! It's a great way to meet new people and practice my French.",
+          avatar:"/CONSAR1.jpg"
+        },
+        {
+          name:"Aurora Velasquez",
+          role:"Computer Support Specialist",
+          content:"I love the French Club at Langara! It's a great way to meet new people and practice my French.",
+          avatar:"/CONSAR1.jpg"
         },
       ],
       contactTitle: "Contact Us",
@@ -69,14 +79,22 @@ const HomepageContent = {
       testimonialsTitle: "Témoignages",
       testimonials: [
         {
-          quote:
-            "Le Club Français de Langara m'a aidé à améliorer ma confiance en parlant français. C'est une communauté formidable !",
-          author: "Sarah L.",
+          name:"Axel Velasquez",
+          role:"Computer Support Specialist",
+          content:"I love the French Club at Langara! It's a great way to meet new people and practice my French.",
+          avatar:"/CONSAR1.jpg"
         },
         {
-          quote:
-            "Les événements culturels organisés par le club m'ont permis de découvrir la richesse de la culture française.",
-          author: "Michael T.",
+          name:"Fernando Salazar ",
+          role:"Langara College Instructor",
+          content:"I love the French Club at Langara! It's a great way to meet new people and practice my French.",
+          avatar:"/CONSAR1.jpg"
+        },
+        {
+          name:"Aurora Velasquez",
+          role:"Computer Support Specialist",
+          content:"I love the French Club at Langara! It's a great way to meet new people and practice my French.",
+          avatar:"/CONSAR1.jpg"
         },
       ],
       contactTitle: "Contactez-nous",
