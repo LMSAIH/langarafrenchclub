@@ -1,7 +1,7 @@
 const EventsContent = {
     en: {
       title: "Our Past Events",
-      categories: ["All", "Culture", "Cuisine", "Language", "Gastronomy"],
+      categories: ["All", "Culture", "Cuisine", "Language"],
       events: [
         {
           id: 1,
@@ -41,7 +41,7 @@ const EventsContent = {
           date: "October 30, 2023",
           description: "Discover a selection of fine French wines paired with assorted cheeses just for you.",
           imageUrl: "/CONSAR1.jpg",
-          category: "Gastronomy",
+          category: "Cuisine",
         },
         {
           id: 6,
@@ -51,11 +51,19 @@ const EventsContent = {
           imageUrl: "/CONSAR1.jpg",
           category: "Culture",
         },
+        {
+          id: 7,
+          title: "French Ammar Lesson",
+          date: "December 12, 2023",
+          description: "Enjoy an evening of Ammar and contemporary French music.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Culture",
+        },
       ],
     },
     fr: {
       title: "Nos Événements Passés",
-      categories: ["Tous", "Culture", "Cuisine", "Langue", "Gastronomie"],
+      categories: ["Tous", "Culture", "Cuisine", "Langue"],
       events: [
         {
           id: 1,
@@ -95,13 +103,21 @@ const EventsContent = {
           date: "30 Octobre 2023",
           description: "Découvrez une sélection de vins français fins, accompagnés de fromages assortis.",
           imageUrl: "/CONSAR1.jpg",
-          category: "Gastronomie",
+          category: "Cuisine",
         },
         {
           id: 6,
           title: "Concert de Musique Française",
           date: "12 Novembre 2023",
           description: "Profitez d'une soirée de musique française classique et contemporaine.",
+          imageUrl: "/CONSAR1.jpg",
+          category: "Culture",
+        },
+        {
+          id: 7,
+          title: "French Ammar Lecon",
+          date: "December 12, 2023",
+          description: "Moi je suis Ammar.",
           imageUrl: "/CONSAR1.jpg",
           category: "Culture",
         },
