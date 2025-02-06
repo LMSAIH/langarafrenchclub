@@ -9,6 +9,7 @@ import EventCard from "./components/EventCard"
 import TestimonialCard from "./components/TestimonialCard"
 import { useLanguage } from "./context/LanguageContext"
 import HomepageContent from "./PageContent/HomepageContent"
+import EventsContent from "./PageContent/EventsContent"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,6 +21,7 @@ export default function Home() {
 
   const { language } = useLanguage();
   const content = HomepageContent[language];
+  const eventContent = EventsContent[language];
 
   useEffect(() => {
     AOS.init({
@@ -99,9 +101,13 @@ export default function Home() {
             {content.eventsTitle}
           </h2>
           <div className="flex flex-row flex-wrap gap-10 justify-center">
-            {content.events.map((event, index) => (
-              <EventCard key={`event ${index}`} title={event.title} description={event.description} date={event.date} />
-            ))}
+          {eventContent.events.slice(-4).reverse().map((event, index) => (
+              <EventCard
+                key={`event ${index}`}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+              />))}
           </div>
         </div>
       </div>
