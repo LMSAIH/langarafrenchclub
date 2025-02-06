@@ -7,7 +7,7 @@ import { RiMenu4Fill } from "react-icons/ri";
 import { Inter } from "next/font/google";
 import { BiHome, BiGroup, BiCalendarEvent, BiHeart, BiPhone, BiWorld } from "react-icons/bi";
 import { useLanguage } from "../context/LanguageContext";
-import  NavbarContent  from "../PageContent/NavbarContent";
+import NavbarContent from "../PageContent/NavbarContent";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -42,11 +42,9 @@ const Nav = () => {
     return (
         <nav className={`transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
             <div className="navbarContainer">
-
                 <div className="logoContainer">
                     <Image src="/LFC_LOGO.png" alt="langara french club logo" width={100} height={100} />
                 </div>
-
 
                 <div className="computerNavigation hidden sm:block">
                     <div className="computerLinkContainer">
@@ -84,8 +82,9 @@ const Nav = () => {
 
                     </div>
                 </div>
+
                 <button className={`${inter.className} bg-none border-2 4xl:border-4 border-black border-solid p-2 my-auto mr-10 4xl:mr-20 h-fit text-lg 4xl:text-5xl text-center rounded-lg flex flex-row hover:bg-black
-                hover:text-white hover:border-white duration-300`} onClick={()=>{setLanguage(language === 'en' ? 'fr' : 'en')}} >
+                hover:text-white hover:border-white duration-300`} onClick={() => { setLanguage(language === 'en' ? 'fr' : 'en') }} >
                     <BiWorld className="my-auto mx-1 size-6 4xl:size-16" />
                     {language.toUpperCase()}
                 </button>
