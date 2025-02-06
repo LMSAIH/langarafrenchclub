@@ -92,6 +92,10 @@ export default function Sponsors() {
             {content.pageContent.description}
           </p>
 
+          <p className="text-center text-lg 4xl:text-5xl mb-5 text-gray-600" data-aos="fade-up">
+            {content.pageContent.clickPrompt}
+          </p>
+
           <div className="flex flex-wrap flex-row justify-center wrap gap-12 mb-16 w-full">
             {content.sponsors.map((sponsor, index) => (
               <div
@@ -112,17 +116,15 @@ export default function Sponsors() {
             ))}
           </div>
 
-          <p className="text-center text-lg 4xl:text-5xl text-gray-600" data-aos="fade-up">
-            {content.pageContent.clickPrompt}
-          </p>
+         
         </div>
       </div>
 
       <SponsorModal sponsor={selectedSponsor} isOpen={!!selectedSponsor} onClose={() => setSelectedSponsor(null)} />
 
-      <div className="relative h-24">
+      <div className="relative h-48 bg-white">
         <svg
-          className="absolute bottom-0 w-full h-24 -mb-1 text-blue-900"
+          className="absolute bottom-0 w-full h-48 -mb-1 text-blue-900"
           preserveAspectRatio="none"
           viewBox="0 0 1440 54"
         >
