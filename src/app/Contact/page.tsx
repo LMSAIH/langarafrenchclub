@@ -3,8 +3,11 @@
 import { Inter } from "next/font/google"
 import { useState, useEffect } from "react"
 import { useForm, type SubmitHandler } from "react-hook-form"
-import { Mail, Phone, MapPin } from "lucide-react"
+import {  MailPlusIcon } from "lucide-react"
+import { BsDiscord, BsInstagram, BsFacebook, BsPinMap, BsPhone } from "react-icons/bs"
+import { SiGmail } from "react-icons/si";
 import { useLanguage } from "../context/LanguageContext"
+import emailjs from "@emailjs/browser";
 import contactContent from "../PageContent/ContactContent"
 import AOS from "aos"
 import "aos/dist/aos.css"
@@ -24,17 +27,8 @@ type FormInputs = {
 
 export default function Contact() {
 
-  const {language} = useLanguage();
+  const { language } = useLanguage();
   const content = contactContent[language];
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<FormInputs>()
-
-  const [isSubmitted, setIsSubmitted] = useState(false)
 
   useEffect(() => {
     AOS.init({
@@ -43,15 +37,6 @@ export default function Contact() {
     })
   }, [])
 
-  const onSubmit: SubmitHandler<FormInputs> = async (data) => {
-   
-    console.log(data)
-    setIsSubmitted(true)
-    reset()
-    setTimeout(() => setIsSubmitted(false), 5000)
-  }
-
-  
 
   return (
     <div className={`${inter.className} min-h-screen`}>
@@ -77,79 +62,31 @@ export default function Contact() {
             {content.title}
           </h1>
 
-          <div className="flex flex-wrap -mx-4">
-            <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0" data-aos="fade-right">
-              <form onSubmit={handleSubmit(onSubmit)} className="bg-gray-100 p-6 rounded-lg shadow-md">
-                <div className="mb-4">
-                  <label htmlFor="name" className="block text-gray-700 4xl:text-4xl font-bold mb-2">
-                    {content.form.nameLabel}
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    {...register("name", { required: "Le nom est requis" })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  {errors.name && <span className="text-red-500 text-sm">{errors.name.message}</span>}
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="email" className="block 4xl:text-4xl text-gray-700 font-bold mb-2">
-                    {content.form.emailLabel}
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    {...register("email", {
-                      required: "L'email est requis",
-                      pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: "Adresse email invalide",
-                      },
-                    })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  {errors.email && <span className="text-red-500 text-sm">{errors.email.message}</span>}
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="message" className="block 4xl:text-4xl text-gray-700 font-bold mb-2">
-                    {content.form.messageLabel}
-                  </label>
-                  <textarea
-                    id="message"
-                    {...register("message", { required: "Le message est requis" })}
-                    rows={4}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  ></textarea>
-                  {errors.message && <span className="text-red-500 text-sm 4xl:text-4xl">{errors.message.message}</span>}
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-md 4xl:text-4xl hover:bg-blue-700 transition-colors duration-300"
-                >
-                  {content.form.submitButton}
-                </button>
-              </form>
-              {isSubmitted && (
-                <div className="mt-4 p-4 bg-green-100 text-green-700 rounded-md 4xl:text-4xl" data-aos="fade-in">
-                  {content.form.successMessage}
-                </div>
-              )}
-            </div>
+          <div className="flex flex-wrap justify-center -mx-4">
+
             <div className="w-full lg:w-1/2 px-4" data-aos="fade-left">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 4xl:text-8xl">{content.contactInfo.heading}</h2>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <Mail className="text-blue-600 mr-4 4xl:size-20" />
+                    <SiGmail className="text-red-600 mr-4 4xl:size-20" />
                     <span className="4xl:text-4xl">{content.contactInfo.email}</span>
                   </div>
                   <div className="flex items-center">
-                    <Phone className="text-blue-600 mr-4 4xl:size-20" />
-                    <span className="4xl:text-4xl">{content.contactInfo.phone}</span>
+                    <BsPinMap className="text-yellow-700 mr-4 4xl:size-20" />
+                    <span className="4xl:text-4xl">{content.contactInfo.address}</span>
                   </div>
                   <div className="flex items-center">
-                    <MapPin className="text-blue-600 mr-4 4xl:size-20" />
-                    <span className="4xl:text-4xl">{content.contactInfo.address}</span>
+                    <BsDiscord className="text-blue-900 mr-4 4xl:size-20" />
+                    <span className="4xl:text-4xl">Discord</span>
+                  </div>
+                  <div className="flex items-center">
+                    <BsInstagram className="text-pink-500 mr-4 4xl:size-20" />
+                    <span className="4xl:text-4xl">leclubdefrancaislangara</span>
+                  </div>
+                  <div className="flex items-center">
+                    <BsFacebook className="text-blue-600 mr-4 4xl:size-20" />
+                    <span className="4xl:text-4xl">langara french club</span>
                   </div>
                 </div>
                 <div className="mt-8">
@@ -157,15 +94,26 @@ export default function Contact() {
                   <p className="4xl:text-4xl">{content.contactInfo.weekdayHours}</p>
                   <p className="4xl:text-4xl">{content.contactInfo.weekendHours}</p>
                 </div>
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-gray-800 mb-4 4xl:text-4xl">Join our mailing list</h3>
+                  <div >
+                    <a href="" className="hover:text-blue-600 duration-300">
+                      <div className="flex flex-row m-auto">
+                      <MailPlusIcon className="text-blue-600 mr-4 4xl:size-20" />
+                        <p className="text-sm text-gray-600 hover:text-blue-600 4xl:text-md"> Click here to join the list </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="relative h-24">
+      <div className="relative h-48 bg-white">
         <svg
-          className="absolute bottom-0 w-full h-24 -mb-1 text-blue-900"
+          className="absolute bottom-0 w-full h-48 -mb-1 text-blue-900"
           preserveAspectRatio="none"
           viewBox="0 0 1440 54"
         >
