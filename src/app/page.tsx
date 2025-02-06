@@ -6,10 +6,10 @@ import { useEffect } from "react"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import EventCard from "./components/EventCard"
-import TestimonialCard from "./components/TestimonialCard"
 import { useLanguage } from "./context/LanguageContext"
 import HomepageContent from "./PageContent/HomepageContent"
 import EventsContent from "./PageContent/EventsContent"
+import TestimonialSlider from "./components/Testimonials"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -132,9 +132,7 @@ export default function Home() {
             {content.testimonialsTitle}
           </h2>
           <div className="flex flex-row wrap gap-10 justify-center">
-            {content.testimonials.map((testimonial, index) => (
-              <TestimonialCard key={`testimonial ${index}`} quote={testimonial.quote} author={testimonial.author} />
-            ))}
+            <TestimonialSlider testimonials={content.testimonials}/>
           </div>
         </div>
       </div>
