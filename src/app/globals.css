@@ -84,8 +84,6 @@ nav {
   @apply text-orange-500 duration-300 -translate-y-1;
 }
 
-
-
 .french-border {
   border-left: 4px solid #002654;
   border-right: 4px solid #ED2939;
