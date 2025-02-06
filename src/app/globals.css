@@ -12,7 +12,7 @@ nav {
 }
 
 .content {
-  @apply mt-40 overflow-x-hidden pb-20;
+  @apply mt-40 overflow-hidden border-none;
 }
 
 .navbarContainer {
@@ -81,7 +81,7 @@ nav {
 }
 
 .computerLinkContainer>a:hover {
-  @apply text-gray-500 duration-300 -translate-y-1;
+  @apply text-orange-500 duration-300 -translate-y-1;
 }
 
 
