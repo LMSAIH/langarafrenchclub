@@ -82,7 +82,7 @@ export default function Events() {
           </div>
 
           <div className="flex flex-wrap justify-center items-stretch gap-8">
-            {filteredEvents.map((event, index) => (
+            {[...filteredEvents].reverse().map((event, index) => (
               <div key={event.id} className="w-full sm:1/3 lg:w-1/5 flex">
                 <DetailedEvent event={event} index={index} />
               </div>
@@ -91,9 +91,9 @@ export default function Events() {
         </div>
       </div>
 
-      <div className="relative h-24 4xl:h-48">
+      <div className="relative h-48 bg-white">
         <svg
-          className="absolute bottom-0 w-full h-24  -mb-1 text-blue-900"
+          className="absolute bottom-0 w-full h-48 -mb-1 text-blue-900"
           preserveAspectRatio="none"
           viewBox="0 0 1440 54"
         >
