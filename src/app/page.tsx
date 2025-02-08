@@ -53,6 +53,7 @@ export default function Home() {
             data-aos-delay="50"
           >
             {content.title}
+            
           </h1>
         </div>
       </div>
