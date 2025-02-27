@@ -59,6 +59,7 @@ const EventsContent = {
           imageUrl: "/CONSAR1.jpg",
           category: "Culture",
         },
+        
       ],
     },
     fr: {

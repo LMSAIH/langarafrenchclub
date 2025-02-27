@@ -4,8 +4,8 @@ const contactContent = {
     title: "Contactez-nous",
     contactInfo: {
       heading: "Informations de contact",
-      email: "contact@clubfrancais.com",
-      phone: "+1 (123) 456-7890",
+      email: "frenchclub.langara1@gmail.com",
+      linkedIn: "Langara French Club",
       address: "100 West 49th Avenue, Vancouver, BC V5Y 2Z6",
       openingHours: "Heures d'ouverture",
       weekdayHours: "Lundi - Vendredi: 9h00 - 17h00",
@@ -30,8 +30,8 @@ const contactContent = {
     title: "Contact Us",
     contactInfo: {
       heading: "Contact Information",
-      email: "contact@clubfrancais.com",
-      phone: "+1 (123) 456-7890",
+      email: "frenchclub.langara1@gmail.com",
+      linkedIn: "Langara French Club",
       address: "100 West 49th Avenue, Vancouver, BC V5Y 2Z6",
       openingHours: "Opening Hours",
       weekdayHours: "Monday - Friday: 9:00 AM - 5:00 PM",
