@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import MembersContent from "../PageContent/MembersContent";
 import { useLanguage } from "../context/LanguageContext";
 
+
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -65,7 +66,7 @@ const Members = () => {
               {content.clubFounders.map((member, index) => (
                 <div
                   key={`member ${index}`}
-                  className="w-5/12 md:w-1/4 lg:w-1/6 flex justify-center"
+                  className="w-full md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
                   data-aos-delay={index * 50}
                 >
@@ -85,7 +86,7 @@ const Members = () => {
               {content.currentExecs.map((member, index) => (
                 <div
                   key={`member ${index}`}
-                  className="w-5/12 md:w-1/4 lg:w-1/6 flex justify-center"
+                  className="w-full md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
                   data-aos-delay={index * 50}
                 >
@@ -105,7 +106,7 @@ const Members = () => {
               {content.oldExecs.map((member, index) => (
                 <div
                   key={`member ${index}`}
-                  className="w-5/12 md:w-1/4 lg:w-1/6 flex justify-center"
+                  className="w-full md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
                   data-aos-delay={index * 50}
                 >
