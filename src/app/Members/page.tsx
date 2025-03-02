@@ -110,7 +110,7 @@ const Members = () => {
                   data-aos="zoom-in"
                   data-aos-delay={index * 50}
                 >
-                  <MemberCard member={{ ...member, id: index }} />
+                  <MemberCard member={member} />
                 </div>
               ))}
             </div>
