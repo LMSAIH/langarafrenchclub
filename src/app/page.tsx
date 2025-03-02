@@ -37,8 +37,8 @@ export default function Home() {
       <div className="relative h-screen">
         <div className="absolute inset-0">
           <Image
-            src="/Langara_french_club.jpg"
-            alt="Langara College image"
+            src="/Langara_french_club.webp"
+            alt="Langara french club image"
             layout="fill"
             objectFit="cover"
             quality={100}
