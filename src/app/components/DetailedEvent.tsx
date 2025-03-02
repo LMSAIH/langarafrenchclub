@@ -14,7 +14,7 @@ const DetailedEvent: React.FC<EventCardProps> = ({ event, index }) => {
     <div
       className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 flex flex-col h-full"
       data-aos="fade-up"
-      data-aos-delay={index * 100}
+      data-aos-delay={index * 30}
     >
       <div className="relative h-48 4xl:h-60">
         <Image
