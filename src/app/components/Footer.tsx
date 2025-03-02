@@ -14,7 +14,7 @@ const Footer = () => {
 
     return (
         <footer className="bg-blue-900 py-8 px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-row wrap gap-20 justify-center mb-10">
+            <div className="flex flex-row wrap flex-wrap gap-20 justify-center mb-10">
                 <Link 
                     href="https://www.instagram.com/leclubdefrancaislangara/" 
                     target="_blank"
