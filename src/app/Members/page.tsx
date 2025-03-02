@@ -68,7 +68,7 @@ const Members = () => {
                   key={`member ${index}`}
                   className="w-full md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
-                  data-aos-delay={index * 50}
+                  data-aos-delay={index * 20}
                 >
                   <MemberCard member={{ ...member, id: index }} />
                 </div>
@@ -88,7 +88,7 @@ const Members = () => {
                   key={`member ${index}`}
                   className="w-full md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
-                  data-aos-delay={index * 50}
+                  data-aos-delay={index * 20}
                 >
                   <MemberCard member={{ ...member, id: index }} />
                 </div>
@@ -108,7 +108,7 @@ const Members = () => {
                   key={`member ${index}`}
                   className="w-full md:w-1/4 lg:w-1/6 flex justify-center"
                   data-aos="zoom-in"
-                  data-aos-delay={index * 50}
+                  data-aos-delay={index * 20}
                 >
                   <MemberCard member={member} />
                 </div>
