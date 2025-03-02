@@ -22,7 +22,7 @@ export const metadata = {
   openGraph: {
     title: "Langara French Club | Vancouver, BC",
     description: "Experience French language and culture with the Langara French Club. Participate in workshops, movie nights, and culinary events to enrich your French learning journey.",
-    url: "https://langarafr.com",
+    url: "https://langarafr.com/LFC_LOGO.png",
     siteName: "Langara French Club",
     images: [
       {
