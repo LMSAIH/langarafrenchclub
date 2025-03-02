@@ -7,6 +7,7 @@ import { X } from "lucide-react";
 
 interface MemberCardProps {
     member: Member;
+  
 }
 
 export default function MemberCard({ member }: MemberCardProps) {
