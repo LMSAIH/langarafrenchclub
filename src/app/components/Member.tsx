@@ -25,7 +25,7 @@ export default function MemberCard({ member }: MemberCardProps) {
                 <img
                     src={member.imageUrl}
                     alt={member.name}
-                    className="w-full h-fit object-cover object-center"
+                    className="w-full h-90 object-cover object-center"
                 />
                 <div className="p-4 ">
                     <h3 className="text-xl 4xl:text-5xl font-semibold text-gray-800">{member.name}</h3>
