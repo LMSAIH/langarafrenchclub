@@ -72,13 +72,13 @@ const MembersContent = {
       {
         name: "Scarlett Abagi",
         role: "Marketing Assistant",
-        bio: "Scarlett is a creative and strategic thinker who helps shape the club’s marketing efforts. With a passion for design and communication, she ensures our promotions are eye-catching and effective.",
+        bio: "As the Marketing Assistant of the Langara French Club, Scarlett Abagi is the creative spark behind our captivating campaigns. With an eye for innovative design and a passion for French culture, she crafts engaging materials that draw new members and energize our community. Her fresh perspective and strategic approach ensure that every initiative resonates with our vibrant spirit.",
         imageUrl: `${currentExecPath}/scarlett.webp`,
       },
       {
         name: "Chiheb Ben Arbia",
         role: "Treasurer",
-        bio: "Chiheb is the financial backbone of the club, ensuring our budget is well-managed and our resources are used efficiently. With a keen eye for numbers and great attention to detail, he keeps everything on track.",
+        bio: "As the Treasurer of the Langara French Club, Chiheb Ben Arbia is the cornerstone of our financial stability, ensuring every resource is managed with precision and care. Beyond his role in balancing our books, his passion for language shines through as he serves as a dedicated French tutor, inspiring our members with his expertise and enthusiasm. His blend of fiscal responsibility and linguistic insight makes him an invaluable pillar of our community.",
         imageUrl: `/LFC_LOGO.png`,
       },
     ],
@@ -155,13 +155,13 @@ const MembersContent = {
       {
         name: "Scarlett Abagi",
         role: "Assistante marketing ",
-        bio: "Scarlett est une penseuse créative et stratégique qui contribue à façonner les efforts marketing du club. Passionnée par le design et la communication, elle veille à ce que nos promotions soient attrayantes et efficaces.",
+        bio: "En tant qu'assistante marketing du Langara French Club, Scarlett Abagi est l'étincelle créative derrière nos campagnes captivantes. Dotée d'un œil pour le design innovant et d'une passion pour la culture française, elle conçoit des supports engageants qui attirent de nouveaux membres et dynamisent notre communauté. Sa perspective novatrice et son approche stratégique garantissent que chaque initiative reflète l'esprit vibrant du club.",
         imageUrl: `${currentExecPath}/scarlett.webp`,
       },
       {
         name: "Chiheb Ben Arbia",
         role: "Trésorier",
-        bio: "Chiheb est le pilier financier du club, s’assurant que notre budget est bien géré et que nos ressources sont utilisées efficacement. Avec un sens aigu des chiffres et une grande attention aux détails, il veille à ce que tout soit en ordre.",
+        bio: "En tant que trésorier du Langara French Club, Chiheb Ben Arbia est le garant de notre stabilité financière, veillant à ce que chaque ressource soit utilisée avec précision et discernement. En plus de ses compétences en gestion, Chiheb partage sa passion pour la langue en tant que tuteur de français, guidant et inspirant nos membres à travers son expertise linguistique. Sa rigueur et son engagement font de lui un pilier essentiel de notre communauté.",
         imageUrl: `/LFC_LOGO.png`,
       },
     ],
