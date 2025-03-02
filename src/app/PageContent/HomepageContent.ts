@@ -1,12 +1,9 @@
-
-
-
 const HomepageContent = {
     en: {
       title: "Welcome to the Langara French Club",
       aboutTitle: "What is the Langara French Club?",
       aboutText:
-        "We are a student-run organization dedicated to spreading the French language and culture. Based at Langara College, we regularly host events to help participants learn the language and share the culture.",
+        "The Langara French Club is dedicated to creating a welcoming and warm environment for all levels of French learners from beginner to advanced. Our workshops and outings provide many opportunities for students to engage with French culture, food and language.",
       eventsTitle: "Our Events",
       events: [
         {
@@ -55,7 +52,7 @@ const HomepageContent = {
       title: "Bienvenue au Club Français de Langara",
       aboutTitle: "Qu'est-ce que le Club Français de Langara ?",
       aboutText:
-        "Nous sommes une organisation dirigée par des étudiants, dédiée à la diffusion de la langue et de la culture françaises. Basés au Collège Langara, nous organisons régulièrement des événements pour aider les participants à apprendre la langue et à partager la culture.",
+        "Le club de français de Langara s'efforce de créer un environnement accueillant et chaleureux pour tous les niveaux d'apprentissage du français, du débutant au plus avancé. Nos ateliers et nos sorties offrent de nombreuses opportunités aux étudiants de s'intéresser à la culture, à la nourriture et à la langue française.",
       eventsTitle: "Nos Événements",
       events: [
         {
