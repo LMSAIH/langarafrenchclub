@@ -127,7 +127,7 @@ export default function Home() {
       </div>
 
 
-      <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+      <div className="bg-white py-16 px-4 sm:px-6 lg:px-8 hidden">
         <div className="max-w-7xl 4xl:max-w-full 4xl:w-3/4 mx-auto">
           <h2 className="text-3xl 4xl:text-8xl font-bold text-blue-900 mb-8 text-center" data-aos="fade-up">
             {content.testimonialsTitle}
