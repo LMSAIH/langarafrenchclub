@@ -16,7 +16,7 @@ const MembersContent = {
       {
         name: "Amar Ulziisaikhan",
         role: "President & co-founder",
-        bio: "President and one of the co-founders of French Club, Amar oversees the general operations and vision of our team.",
+        bio: "As President of the club, Amar is our dynamic guiding force who helped lay the very foundation of our club. With his disciplined passion for jujutsu and his innovative mindset, Amar effortlessly blends strategic leadership with a spirit of adventure. Whether he’s spearheading new initiatives or energizing members with his unique flair, Amar ensures our club remains as spirited and forward-thinking as ever.",
         imageUrl: `${currentExecPath}/amar.webp`,
       },
       {
@@ -99,7 +99,7 @@ const MembersContent = {
       {
         name: "Amar Ulziisaikhan",
         role: "Président & cofondateur",
-        bio: "Président et l’un des cofondateurs du Club de français, Amar supervise les opérations générales et la vision de notre équipe.",
+        bio: "En tant que président du club, Amar est notre force motrice dynamique qui a joué un rôle clé dans la création du club. Avec sa passion disciplinée pour le jujutsu et son esprit innovant, Amar allie avec aisance leadership stratégique et esprit d'aventure. Qu'il soit à l'initiative de nouvelles propositions ou qu'il insuffle son énergie unique aux membres, Amar veille à ce que notre club reste toujours aussi passionné et tourné vers l'avenir.",
         imageUrl: `${currentExecPath}/amar.webp`,
       },
       {
