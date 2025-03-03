@@ -27,7 +27,7 @@ const sponsorsContent: Record<string, TranslatedSponsors> = {
         logo: "/LFC_LOGO.png",
         description:
           "Coming Soon...",
-        website: "https://langarafr.ca",
+        website: "https://langarafr.com",
       },
 
     ],
