@@ -17,46 +17,12 @@ const inter = Inter({
   weight: ["400", "500", "700"],
 })
 
-const sponsors: Sponsor[] = [
-  {
-    id: 1,
-    name: "Café Parisien",
-    logo: "/CONSAR1.jpg",
-    description:
-      "Café Parisien est fier de soutenir le Club Français de Langara. Nous partageons la passion de la culture française et sommes ravis de contribuer à son rayonnement au sein de la communauté étudiante.",
-    website: "https://www.cafeparisien.com",
-  },
-  {
-    id: 2,
-    name: "Librairie Française",
-    logo: "/CONSAR1.jpg",
-    description:
-      "La Librairie Française est heureuse de participer à l'enrichissement culturel des étudiants du Club Français de Langara en fournissant des ressources littéraires en langue française.",
-    website: "https://www.librairiefrancaise.com",
-  },
-  {
-    id: 3,
-    name: "Alliance Française",
-    logo: "/CONSAR1.jpg",
-    description:
-      "L'Alliance Française soutient avec enthousiasme les initiatives du Club Français de Langara, contribuant ainsi à la promotion de la langue et de la culture françaises.",
-    website: "https://www.alliancefrancaise.com",
-  },
-  {
-    id: 4,
-    name: "Pâtisserie Élégante",
-    logo: "/CONSAR1.jpg",
-    description:
-      "Pâtisserie Élégante est ravie de partager la douceur de la gastronomie française avec les membres du Club Français de Langara à travers nos délicieuses pâtisseries.",
-    website: "https://www.patisserieelegante.com",
-  },
-]
 
 export default function Sponsors() {
   const [selectedSponsor, setSelectedSponsor] = useState<Sponsor | null>(null);
-  const {language} = useLanguage();
+  const { language } = useLanguage();
   const content = sponsorsContent[language];
-  
+
   useEffect(() => {
     AOS.init({
       duration: 300,
@@ -97,6 +63,7 @@ export default function Sponsors() {
           </p>
 
           <div className="flex flex-wrap flex-row justify-center wrap gap-12 mb-16 w-full">
+
             {content.sponsors.map((sponsor, index) => (
               <div
                 key={sponsor.id}
@@ -106,7 +73,7 @@ export default function Sponsors() {
                 data-aos-delay={index * 100}
               >
                 <Image
-                  src={sponsor.logo }
+                  src={sponsor.logo}
                   alt={`${sponsor.name} logo`}
                   width={150}
                   height={150}
@@ -114,9 +81,10 @@ export default function Sponsors() {
                 />
               </div>
             ))}
+
           </div>
 
-         
+
         </div>
       </div>
 
