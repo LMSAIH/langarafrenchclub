@@ -58,7 +58,7 @@ const Members = () => {
             <h2
               className={`${inter.className} french-accent text-center text-3xl md:text-4xl 4xl:text-7xl font-semibold text-red-700 mb-12`}
             >
-              Club founders
+              Club Executives
             </h2>
            
             <div className="flex flex-wrap justify-center items-stretch w-full h-fit mx-auto mt-10 gap-x-4 gap-y-10">
@@ -110,7 +110,7 @@ const Members = () => {
                   data-aos="zoom-in"
                   data-aos-delay={index * 20}
                 >
-                  <MemberCard member={member} />
+             <MemberCard member={{ ...member, id: index }} />
                 </div>
               ))}
             </div>
