@@ -14,20 +14,6 @@ const MembersContent = {
         imageUrl: `${currentExecPath}/aurora.webp`,
       },
       {
-        name: "Amar Ulziisaikhan",
-        role: "President & co-founder",
-        bio: "As President of the club, Amar is our dynamic guiding force who helped lay the very foundation of our club. With his disciplined passion for jujutsu and his innovative mindset, Amar effortlessly blends strategic leadership with a spirit of adventure. Whether he’s spearheading new initiatives or energizing members with his unique flair, Amar ensures our club remains as spirited and forward-thinking as ever.",
-        imageUrl: `${currentExecPath}/amar.webp`,
-      },
-      {
-        name: "Joseph Farrage",
-        role: "Head of events & co-founder",
-        bio: "As Head of Events and Co-founder, Joseph is the beating heart of our workshops and outings at Langara French Club. He oversees our entire events team and makes sure that each of our events are enjoyable and educational. Always ready to plan our next event and quick to crack a joke, Joseph is on the job.",
-        imageUrl: `${currentExecPath}/joseph.webp`,
-      },
-    ],
-    currentExecs: [
-      {
         name: "Axel Velasquez",
         role: "Head of IT",
         bio: "As Head of IT, Axel ensures that all technological aspects of the French Club run smoothly, including building this very website! A passionate and driven Computer Science student, he brings energy, expertise, and a can-do attitude to every project he takes on. ",
@@ -39,11 +25,33 @@ const MembersContent = {
         bio: "As our Activity Planner, Kareena ensures every event runs seamlessly for our members. With her cheerful spirit, dedication, and keen eye for detail, she works tirelessly to create well-organized and engaging activities for everyone to enjoy. ",
         imageUrl: `${currentExecPath}/kareena.webp`,
       },
+    ],
+    currentExecs: [
       {
-        name: "Yannis Stefanyan ",
+        name: "Yannis Stefanyan",
         role: "Marketing Assistant",
         bio: "Yannis, our hardworking and friendly marketing assistant, brings dedication and warmth to our team. With a keen eye for detail and a positive attitude, he plays a key role in making our marketing efforts a success.  ",
         imageUrl: `${currentExecPath}/yanis.webp`,
+      },
+      {
+        name: "Scarlett Abagi",
+        role: "Marketing Assistant",
+        bio: "As the Marketing Assistant of the Langara French Club, Scarlett Abagi is the creative spark behind our captivating campaigns. With an eye for innovative design and a passion for French culture, she crafts engaging materials that draw new members and energize our community. Her fresh perspective and strategic approach ensure that every initiative resonates with our vibrant spirit.",
+        imageUrl: `${currentExecPath}/scarlett.webp`,
+      },
+    ],
+    oldExecs: [
+      {
+        name: "Amar Ulziisaikhan",
+        role: "President & co-founder",
+        bio: "As President of the club, Amar is our dynamic guiding force who helped lay the very foundation of our club. With his disciplined passion for jujutsu and his innovative mindset, Amar effortlessly blends strategic leadership with a spirit of adventure. Whether he’s spearheading new initiatives or energizing members with his unique flair, Amar ensures our club remains as spirited and forward-thinking as ever.",
+        imageUrl: `${currentExecPath}/amar.webp`,
+      },
+      {
+        name: "Joseph Farrage",
+        role: "Head of events & co-founder",
+        bio: "As Head of Events and Co-founder, Joseph is the beating heart of our workshops and outings at Langara French Club. He oversees our entire events team and makes sure that each of our events are enjoyable and educational. Always ready to plan our next event and quick to crack a joke, Joseph is on the job.",
+        imageUrl: `${currentExecPath}/joseph.webp`,
       },
       {
         name: "Lisa Maura",
@@ -67,13 +75,7 @@ const MembersContent = {
         name: "Hamed Pourkerman",
         role: "Events Assistant",
         bio: "Hamed Pourkerman, one of the earliest members of our team, is a fun and inquisitive event assistant who brings curiosity and enthusiasm to every task. Always eager to learn and engage, he adds a liveliness to our events.",
-        imageUrl: `${currentExecPath}/hamed.webp`
-      },
-      {
-        name: "Scarlett Abagi",
-        role: "Marketing Assistant",
-        bio: "As the Marketing Assistant of the Langara French Club, Scarlett Abagi is the creative spark behind our captivating campaigns. With an eye for innovative design and a passion for French culture, she crafts engaging materials that draw new members and energize our community. Her fresh perspective and strategic approach ensure that every initiative resonates with our vibrant spirit.",
-        imageUrl: `${currentExecPath}/scarlett.webp`,
+        imageUrl: `${currentExecPath}/hamed.webp`,
       },
       {
         name: "Chiheb Ben Arbia",
@@ -82,7 +84,6 @@ const MembersContent = {
         imageUrl: `${currentExecPath}/chiheb.webp`,
       },
     ],
-    oldExecs: [],
   },
   fr: {
     currentExecsTitle: "Dirigeants Actuels du Club",
@@ -97,20 +98,6 @@ const MembersContent = {
         imageUrl: `${currentExecPath}/aurora.webp`,
       },
       {
-        name: "Amar Ulziisaikhan",
-        role: "Président & cofondateur",
-        bio: "En tant que président du club, Amar est notre force motrice dynamique qui a joué un rôle clé dans la création du club. Avec sa passion disciplinée pour le jujutsu et son esprit innovant, Amar allie avec aisance leadership stratégique et esprit d'aventure. Qu'il soit à l'initiative de nouvelles propositions ou qu'il insuffle son énergie unique aux membres, Amar veille à ce que notre club reste toujours aussi passionné et tourné vers l'avenir.",
-        imageUrl: `${currentExecPath}/amar.webp`,
-      },
-      {
-        name: "Joseph Farrage",
-        role: "Responsable des événements & cofondateur",
-        bio: " En tant que responsable des événements et cofondateur, Joseph est le cœur battant de nos ateliers et sorties au Club de Français de Langara. Il supervise l'ensemble de notre équipe événementielle et s'assure que chacun de nos événements est agréable et éducatif. Toujours prêt à planifier notre prochain événement et prompt à faire des blagues, Joseph est au travail. ",
-        imageUrl: `${currentExecPath}/joseph.webp`,
-      },
-    ],
-    currentExecs: [
-      {
         name: "Axel Velasquez",
         role: "Responsable informatique",
         bio: " En tant que responsable informatique, Axel s'assure que tous les aspects technologiques du Club de français fonctionnent bien, y compris la construction de ce site web ! Etudiant en informatique passionné et motivé, il apporte son énergie, son expertise et une attitude positive à chaque projet qu'il entreprend.",
@@ -122,11 +109,33 @@ const MembersContent = {
         bio: "En tant que planificatrice d'activités, Kareena veille à ce que chaque événement se déroule sans accroc pour nos membres. Avec son esprit joyeux, son dévouement et son sens aigu du détail, elle travaille sans relâche pour créer des activités bien organisées et attrayantes dont tout le monde peut profiter. ",
         imageUrl: `${currentExecPath}/kareena.webp`,
       },
+    ],
+    currentExecs: [
       {
         name: "Yannis Stefanyan",
         role: "Assistant marketing",
         bio: "Yannis, notre assistant marketing, travailleur et sympathique, apporte dévouement et chaleur à notre équipe. Avec un sens aigu du détail et une attitude positive, il joue un rôle clé dans la réussite de nos efforts de marketing. ",
         imageUrl: `${currentExecPath}/yanis.webp`,
+      },
+      {
+        name: "Scarlett Abagi",
+        role: "Assistante marketing ",
+        bio: "En tant qu'assistante marketing du Langara French Club, Scarlett Abagi est l'étincelle créative derrière nos campagnes captivantes. Dotée d'un œil pour le design innovant et d'une passion pour la culture française, elle conçoit des supports engageants qui attirent de nouveaux membres et dynamisent notre communauté. Sa perspective novatrice et son approche stratégique garantissent que chaque initiative reflète l'esprit vibrant du club.",
+        imageUrl: `${currentExecPath}/scarlett.webp`,
+      },
+    ],
+    oldExecs: [
+      {
+        name: "Amar Ulziisaikhan",
+        role: "Président & cofondateur",
+        bio: "En tant que président du club, Amar est notre force motrice dynamique qui a joué un rôle clé dans la création du club. Avec sa passion disciplinée pour le jujutsu et son esprit innovant, Amar allie avec aisance leadership stratégique et esprit d'aventure. Qu'il soit à l'initiative de nouvelles propositions ou qu'il insuffle son énergie unique aux membres, Amar veille à ce que notre club reste toujours aussi passionné et tourné vers l'avenir.",
+        imageUrl: `${currentExecPath}/amar.webp`,
+      },
+      {
+        name: "Joseph Farrage",
+        role: "Responsable des événements & cofondateur",
+        bio: " En tant que responsable des événements et cofondateur, Joseph est le cœur battant de nos ateliers et sorties au Club de Français de Langara. Il supervise l'ensemble de notre équipe événementielle et s'assure que chacun de nos événements est agréable et éducatif. Toujours prêt à planifier notre prochain événement et prompt à faire des blagues, Joseph est au travail. ",
+        imageUrl: `${currentExecPath}/joseph.webp`,
       },
       {
         name: "Lisa Maura",
@@ -143,20 +152,14 @@ const MembersContent = {
       {
         name: "Duncan",
         role: "Assistant événements",
-        bio: "Duncan apporte son enthousiasme et son énergie à l’équipe événementielle. Toujours prêt à donner un coup de main, il veille à ce que chaque événement soit captivant et bien organisé. Grâce à son sens de la résolution des problèmes et à son attitude amicale, il joue un rôle essentiel dans notre équipe.",
+        bio: "Duncan apporte son enthousiasme et son énergie à l'équipe événementielle. Toujours prêt à donner un coup de main, il veille à ce que chaque événement soit captivant et bien organisé. Grâce à son sens de la résolution des problèmes et à son attitude amicale, il joue un rôle essentiel dans notre équipe.",
         imageUrl: `${currentExecPath}/duncan.webp`,
       },
       {
         name: "Hamed Pourkerman",
         role: "Assistant événements",
         bio: "Hamed Pourkerman, l'un des premiers membres de notre équipe, est un assistant événementiel amusant et curieux qui apporte de la curiosité et de l'enthousiasme à chaque tâche. Toujours désireux d'apprendre et de s'impliquer, il ajoute de la vivacité à nos événements.",
-        imageUrl: `${currentExecPath}/hamed.webp`
-      },
-      {
-        name: "Scarlett Abagi",
-        role: "Assistante marketing ",
-        bio: "En tant qu'assistante marketing du Langara French Club, Scarlett Abagi est l'étincelle créative derrière nos campagnes captivantes. Dotée d'un œil pour le design innovant et d'une passion pour la culture française, elle conçoit des supports engageants qui attirent de nouveaux membres et dynamisent notre communauté. Sa perspective novatrice et son approche stratégique garantissent que chaque initiative reflète l'esprit vibrant du club.",
-        imageUrl: `${currentExecPath}/scarlett.webp`,
+        imageUrl: `${currentExecPath}/hamed.webp`,
       },
       {
         name: "Chiheb Ben Arbia",
@@ -165,7 +168,6 @@ const MembersContent = {
         imageUrl: `${currentExecPath}/chiheb.webp`,
       },
     ],
-    oldExecs: [],
   },
 };
 
