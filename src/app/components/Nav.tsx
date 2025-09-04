@@ -3,11 +3,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { RiMenu4Fill } from "react-icons/ri";
+import { RiMenu4Fill, RiCloseFill, RiGlobalLine } from "react-icons/ri";
 import { Inter } from "next/font/google";
-import { BiHome, BiGroup, BiCalendarEvent, BiHeart, BiPhone, BiWorld } from "react-icons/bi";
 import { useLanguage } from "../context/LanguageContext";
 import NavbarContent from "../PageContent/NavbarContent";
+import {
+    NavigationMenu,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -15,8 +22,8 @@ const inter = Inter({
     weight: ["400", "500"],
 });
 
-const Nav = () => {
 
+const Nav = () => {
     const [open, setIsOpen] = useState(false);
     const [visible, setVisible] = useState(true);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -40,96 +47,133 @@ const Nav = () => {
     }, [prevScrollPos, visible])
 
     return (
-        <nav className={`transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
-            <div className="navbarContainer">
-                <div className="logoContainer">
-                    <Image src="/LFC_LOGO.png" alt="langara french club logo" width={100} height={100} />
-                </div>
+        <div className="fixed top-4 left-4 right-4 lg:left-1/2 lg:right-auto lg:transform lg:-translate-x-1/2 z-50 lg:w-fit">
+            <nav className="bg-black/70 backdrop-blur-md border border-white/30 rounded-2xl shadow-xl px-4 py-2 w-full lg:max-w-fit mx-auto">
+                <div className="flex items-center justify-between lg:gap-4 lg:justify-start">
 
-                <div className="computerNavigation hidden sm:block">
-                    <div className="computerLinkContainer">
+                    {/* Logo */}
+                    <div className="flex items-center">
+                        <Image src="/LFC_LOGO.png" alt="langara french club logo" width={120} height={120} className="w-auto h-8 lg:h-10 brightness-110" />
+                    </div>
 
-                        <Link href="/">
-                            <div className="linkContainer">
-                                <BiHome className="linkIcon" />
-                                <p> {content.home} </p>
-                            </div>
-                        </Link>
-                        <Link href="/Members">
-                            <div className="linkContainer">
-                                <BiGroup className="linkIcon" />
-                                <p> {content.members} </p>
-                            </div>
-                        </Link>
-                        <Link href="/Events">
-                            <div className="linkContainer">
-                                <BiCalendarEvent className="linkIcon" />
-                                <p> {content.events} </p>
-                            </div>
-                        </Link>
-                        <Link href="/Sponsors">
-                            <div className="linkContainer">
-                                <BiHeart className="linkIcon" />
-                                <p> {content.sponsors} </p>
-                            </div>
-                        </Link>
-                        <Link href="/Contact">
-                            <div className="linkContainer">
-                                <BiPhone className="linkIcon" />
-                                <p> {content.contact} </p>
-                            </div>
-                        </Link>
+                    {/* Desktop Navigation */}
+                    <div className="hidden lg:flex items-center">
+                        <NavigationMenu>
+                            <NavigationMenuList className="space-x-2">
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink href="/" className={cn(
+                                        navigationMenuTriggerStyle(),
+                                        "bg-transparent hover:bg-white/20 hover:text-white text-gray-300 font-medium transition-all duration-300 rounded-lg px-4 py-2"
+                                    )}>
+                                        {content.home}
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
 
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink href="/Members" className={cn(
+                                        navigationMenuTriggerStyle(),
+                                        "bg-transparent hover:bg-white/20 hover:text-white text-gray-300 font-medium transition-all duration-300 rounded-lg px-4 py-2"
+                                    )}>
+                                        {content.members}
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink href="/Events" className={cn(
+                                        navigationMenuTriggerStyle(),
+                                        "bg-transparent hover:bg-white/20 hover:text-white text-gray-300 font-medium transition-all duration-300 rounded-lg px-4 py-2"
+                                    )}>
+                                        {content.events}
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink href="/Sponsors" className={cn(
+                                        navigationMenuTriggerStyle(),
+                                        "bg-transparent hover:bg-white/20 hover:text-white text-gray-300 font-medium transition-all duration-300 rounded-lg px-4 py-2"
+                                    )}>
+                                        {content.sponsors}
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink href="/Contact" className={cn(
+                                        navigationMenuTriggerStyle(),
+                                        "bg-transparent hover:bg-white/20 hover:text-white text-gray-300 font-medium transition-all duration-300 rounded-lg px-4 py-2"
+                                    )}>
+                                        {content.contact}
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+                            </NavigationMenuList>
+                        </NavigationMenu>
+                    </div>
+
+                    {/* Language Select & Mobile Menu */}
+                    <div className="flex items-center gap-2">
+                        {/* Language Toggle Button */}
+                        <button
+                            onClick={() => setLanguage(language === 'en' ? 'fr' : 'en')}
+                            className="flex items-center gap-1.5 px-3 h-7 text-xs bg-white/10 border border-white/20 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-medium"
+                        >
+
+                            {language.toUpperCase()}
+                            <RiGlobalLine className="h-3 w-3" />
+                        </button>
+
+                        {/* Mobile Menu Button */}
+                        <div className="lg:hidden">
+                            <button
+                                onClick={handleOpen}
+                                className="p-1.5 rounded-lg hover:bg-white/20 transition-colors duration-200"
+                            >
+                                {open ? (
+                                    <RiCloseFill className="h-4 w-4 text-white" />
+                                ) : (
+                                    <RiMenu4Fill className="h-4 w-4 text-white" />
+                                )}
+                            </button>
+                        </div>
                     </div>
                 </div>
+            </nav>
 
-                <button className={`${inter.className} bg-none border-2 4xl:border-4 border-black border-solid p-2 my-auto mr-10 4xl:mr-20 h-fit text-lg 4xl:text-5xl text-center rounded-lg flex flex-row hover:bg-black
-                hover:text-white hover:border-white duration-300`} onClick={() => { setLanguage(language === 'en' ? 'fr' : 'en') }} >
-                    <BiWorld className="my-auto mx-1 size-6 4xl:size-16" />
-                    {language.toUpperCase()}
-                </button>
-                <div className="hambNav sm:hidden">
-                    <RiMenu4Fill onClick={handleOpen} color={open ? "red" : "black"} />
+            {/* Mobile Navigation Dropdown */}
+            {open && (
+                <div className="lg:hidden absolute top-full left-0 right-0 mt-1 bg-black/70 backdrop-blur-md border border-white/30 rounded-xl shadow-xl overflow-hidden">
+                    <div className={`${inter.className} flex flex-col py-2`}>
+                        <Link href="/" onClick={handleOpen}>
+                            <div className="px-4 py-2 hover:bg-white/10 hover:text-white text-gray-300 transition-all duration-200 text-sm">
+                                {content.home}
+                            </div>
+                        </Link>
+
+                        <Link href="/Members" onClick={handleOpen}>
+                            <div className="px-4 py-2 hover:bg-white/10 hover:text-white text-gray-300 transition-all duration-200 text-sm">
+                                {content.members}
+                            </div>
+                        </Link>
+
+                        <Link href="/Events" onClick={handleOpen}>
+                            <div className="px-4 py-2 hover:bg-white/10 hover:text-white text-gray-300 transition-all duration-200 text-sm">
+                                {content.events}
+                            </div>
+                        </Link>
+
+                        <Link href="/Sponsors" onClick={handleOpen}>
+                            <div className="px-4 py-2 hover:bg-white/10 hover:text-white text-gray-300 transition-all duration-200 text-sm">
+                                {content.sponsors}
+                            </div>
+                        </Link>
+
+                        <Link href="/Contact" onClick={handleOpen}>
+                            <div className="px-4 py-2 hover:bg-white/10 hover:text-white text-gray-300 transition-all duration-200 text-sm">
+                                {content.contact}
+                            </div>
+                        </Link>
+                    </div>
                 </div>
-            </div>
-            <div className={`mobileNavigation ${open ? "openNav" : "closedNav"} `} >
-                <div className={`mobileLinkContainer ${inter.className}`}>
-                    <Link href="/" onClick={handleOpen}>
-                        <div className="linkContainer">
-                            <BiHome className="linkIcon" />
-                            <p> {content.home} </p>
-                        </div>
-                    </Link>
-                    <Link href="/Members" onClick={handleOpen}>
-                        <div className="linkContainer">
-                            <BiGroup className="linkIcon" />
-                            <p> {content.members} </p>
-                        </div>
-                    </Link>
-                    <Link href="/Events" onClick={handleOpen}>
-                        <div className="linkContainer">
-                            <BiCalendarEvent className="linkIcon" />
-                            <p> {content.events} </p>
-                        </div>
-                    </Link>
-                    <Link href="/Sponsors" onClick={handleOpen}>
-                        <div className="linkContainer">
-                            <BiHeart className="linkIcon" />
-                            <p> {content.sponsors} </p>
-                        </div>
-                    </Link>
-                    <Link href="/Contact" onClick={handleOpen}>
-                        <div className="linkContainer">
-                            <BiPhone className="linkIcon" />
-                            <p> {content.contact} </p>
-                        </div>
-                    </Link>
-                </div>
-            </div>
-
-
-
-        </nav>
+            )}
+        </div>
     );
 }
 
