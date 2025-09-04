@@ -14,34 +14,34 @@ const Footer = () => {
 
     return (
         <footer className="bg-blue-900 py-8 px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-row wrap flex-wrap gap-20 justify-center mb-10">
+            <div className="flex flex-row wrap flex-wrap gap-10 md:gap-14 justify-center mb-10">
                 <Link 
                     href="https://www.instagram.com/leclubdefrancaislangara/" 
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <BsInstagram className="hover:-translate-y-1 duration-300 size-10 4xl:size-20 text-pink-600" />
+                    <BsInstagram className="hover:-translate-y-1 duration-300 size-8 md:size-10  text-pink-600" />
                 </Link>
                 <Link 
                     href="https://www.facebook.com/langara.french.club/" 
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <BsFacebook className="size-10 text-blue-400 hover:-translate-y-1 duration-300 4xl:size-20" />
+                    <BsFacebook className="size-8 md:size-10 text-blue-400 hover:-translate-y-1 duration-300" />
                 </Link>
                 <Link 
                     href="https://discord.gg/9UQchagN43" 
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <BsDiscord className="size-10 text-white hover:-translate-y-1 duration-300 4xl:size-20" />
+                    <BsDiscord className="size-8 md:size-10 text-white hover:-translate-y-1 duration-300" />
                 </Link>
                 <Link 
                     href="https://www.linkedin.com/company/langara-french-club/posts/?feedView=all" 
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <BsLinkedin className="size-10 text-white hover:-translate-y-1 duration-300 4xl:size-20" />
+                    <BsLinkedin className="size-8 md:size-10 text-white hover:-translate-y-1 duration-300 4xl:size-20" />
                 </Link>
             </div>
             <div className="max-w-7xl mx-auto text-center">
