@@ -11,7 +11,7 @@ interface ContactSectionProps {
 const ContactSection = ({ contactTitle, contactText, contactButton }: ContactSectionProps) => {
   return (
     <div className="bg-frenchBlue py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center -translate-y-8">
         <H2
           className="text-white mb-6"
           data-aos="fade-up"
