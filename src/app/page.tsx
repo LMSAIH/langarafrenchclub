@@ -52,7 +52,7 @@ export default function Home() {
         contactButton={content.contactButton}
       />
 
-      <WaveSeparator className="bg-frenchBlue" />
+      <WaveSeparator className="bg-frenchBlue border-t-2 border-frenchBlue mt-0" />
     </div>
   )
 }
