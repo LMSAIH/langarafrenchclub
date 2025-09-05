@@ -13,7 +13,7 @@ const Footer = () => {
     }, [])
 
     return (
-        <footer className="bg-blue-900 py-8 px-4 sm:px-6 lg:px-8">
+        <footer className="bg-blue-900 py-8 px-4 sm:px-6 lg:px-8 mb-0 mt-0 border-y-2 border-blue-900">
             <div className="flex flex-row wrap flex-wrap gap-10 md:gap-14 justify-center mb-10">
                 <Link 
                     href="https://www.instagram.com/leclubdefrancaislangara/" 
