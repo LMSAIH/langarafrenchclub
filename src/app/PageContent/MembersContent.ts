@@ -5,6 +5,11 @@ const MembersContent = {
     currentExecsTitle: "Current Club Leaders",
     oldExecsTitle: "Former Club Leaders",
     teamIntro: "Here is our amazing team!",
+    teamDescription: "Meet the passionate individuals who make our French club extraordinary",
+    clickToLearnMore: "Click on any member to discover their story and role in our vibrant community!",
+    clubExecutivesTitle: "Club Executives",
+    currentLeadersTitle: "Current Leaders", 
+    formerLeadersTitle: "Former Leaders",
     close: "Close",
     clubFounders: [
       {
@@ -15,8 +20,8 @@ const MembersContent = {
       },
       {
         name: "Kareena Mistry",
-        role: "Vice-présidente & Responsable marketing",
-        bio: "Kareena, notre vice-présidente et responsable marketing, supervise désormais le marketing du club et soutient l'équipe exécutive. Sa créativité et son sens de l'organisation contribuent à la promotion de nos événements et à l'engagement des membres.",
+        role: "Vicepresident & Head of Marketing",
+        bio: "Kareena, our Vice President and Head of Marketing, now oversees the club's marketing efforts and supports the executive team. Her creativity and organizational skills contribute to promoting our events and engaging members.",
         imageUrl: `${currentExecPath}/kareena.webp`,
       },
       {
@@ -89,6 +94,11 @@ const MembersContent = {
     currentExecsTitle: "Dirigeants Actuels du Club",
     oldExecsTitle: "Anciens Dirigeants du Club",
     teamIntro: "Voici notre équipe incroyable !",
+    teamDescription: "Rencontrez les personnes passionnées qui rendent notre club français extraordinaire",
+    clickToLearnMore: "Cliquez sur n'importe quel membre pour découvrir son histoire et son rôle dans notre communauté dynamique !",
+    clubExecutivesTitle: "Dirigeants du Club",
+    currentLeadersTitle: "Dirigeants Actuels",
+    formerLeadersTitle: "Anciens Dirigeants", 
     close: "Fermer",
     clubFounders: [
       {
