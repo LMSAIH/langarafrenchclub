@@ -19,7 +19,7 @@ const WaveSeparator = ({ className, variant = 'down' }: WaveSeparatorProps) => {
         : "absolute bottom-0 w-full h-16 -mb-1";
 
     return (
-        <div className={`relative h-16 text-blue-900 mt-0 ${className}`}>
+        <div className={`relative h-16 text-blue-900 my-0 ${className}`}>
             <svg
                 className={svgClassName}
                 preserveAspectRatio="none"
