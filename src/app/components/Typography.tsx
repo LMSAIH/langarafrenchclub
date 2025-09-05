@@ -13,7 +13,7 @@ interface TypographyProps {
 }
 
 export const H1 = ({ children, className = "" }: TypographyProps) => (
-  <h1 className={`${poppins.className} text-4xl md:text-5xl lg:text-6xl font-bold ${className}`}>
+  <h1 className={`${poppins.className} text-4xl md:text-5xl lg:text-6xl font-extrabold ${className}`}>
     {children}
   </h1>
 );
