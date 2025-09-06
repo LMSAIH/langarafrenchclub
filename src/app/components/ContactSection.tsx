@@ -1,6 +1,6 @@
 "use client"
 
-import { H2, P } from "./Typography"
+import { H2, P, Span } from "./Typography"
 
 interface ContactSectionProps {
   contactTitle: string
@@ -31,7 +31,7 @@ const ContactSection = ({ contactTitle, contactText, contactButton }: ContactSec
           data-aos="fade-up"
           data-aos-delay="150"
         >
-          <span className="relative z-10">{contactButton}</span>
+          <Span className="relative z-10">{contactButton}</Span>
           <div className="absolute inset-0 bg-frenchBlue/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </a>
       </div>
