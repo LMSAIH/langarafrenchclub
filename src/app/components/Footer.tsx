@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { BsInstagram, BsFacebook, BsDiscord, BsLinkedin } from "react-icons/bs";
+import { P } from "./Typography";
 import Link from "next/link";
 
 const Footer = () => {
@@ -20,7 +21,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <BsInstagram className="hover:-translate-y-1 duration-300 size-8 md:size-10  text-pink-600" />
+                    <BsInstagram className="hover:-translate-y-1 duration-300 size-8 md:size-10 text-pink-600" />
                 </Link>
                 <Link 
                     href="https://www.facebook.com/langara.french.club/" 
@@ -41,11 +42,11 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <BsLinkedin className="size-8 md:size-10 text-white hover:-translate-y-1 duration-300 4xl:size-20" />
+                    <BsLinkedin className="size-8 md:size-10 text-white hover:-translate-y-1 duration-300 " />
                 </Link>
             </div>
             <div className="max-w-7xl mx-auto text-center">
-                <p className="text-white 4xl:text-4xl">&copy; {year} Club Français de Langara. Tous droits réservés.</p>
+                <P className="text-white">&copy; {year} Club Français de Langara. Tous droits réservés.</P>
             </div>
         </footer>
     );
