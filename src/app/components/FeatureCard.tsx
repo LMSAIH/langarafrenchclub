@@ -1,12 +1,13 @@
 "use client"
 
 import type React from "react"
+import Image from "next/image"
 import { H3, P } from "./Typography"
 
 interface FeatureCardProps {
   title: string
   description: string
-  icon: React.ReactNode
+  duckImage: string
   borderColor: string
   hoverColor: string
   iconBgColor: string
@@ -17,11 +18,9 @@ interface FeatureCardProps {
 const FeatureCard: React.FC<FeatureCardProps> = ({ 
   title, 
   description, 
-  icon, 
+  duckImage, 
   borderColor, 
   hoverColor, 
-  iconBgColor, 
-  iconBorderColor,
   delay = 0 
 }) => {
   return (
@@ -32,8 +31,14 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
     >
       <div className={`absolute inset-0 ${hoverColor} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
       <div className="relative z-10">
-        <div className={`w-16 h-16 ${iconBgColor} rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg border-b-4 ${iconBorderColor}`}>
-          {icon}
+        <div className={` rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300`}>
+          <Image
+            src={duckImage}
+            alt="Feature Duck"
+            width={32}
+            height={32}
+            className="w-24 h-24 object-contain"
+          />
         </div>
         <H3 className="text-gray-900 mb-2">{title}</H3>
         <P className="text-gray-600">{description}</P>
