@@ -1,10 +1,16 @@
-import { Poppins } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 import { ReactNode } from "react";
 
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "700"],
 });
 
 interface TypographyProps {
@@ -31,7 +37,13 @@ export const H3 = ({ children, className = "" }: TypographyProps) => (
 );
 
 export const P = ({ children, className = "" }: TypographyProps) => (
-  <p className={`${poppins.className} text-base md:text-lg leading-relaxed ${className}`}>
+  <p className={`${inter.className} text-base md:text-lg leading-relaxed ${className}`}>
     {children}
   </p>
+);
+
+export const Span = ({ children, className = "" }: TypographyProps) => (
+  <span className={`${inter.className} ${className}`}>
+    {children}
+  </span>
 );
