@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import EventCard from "./EventCard"
-import { H2 } from "./Typography"
+import { H2, Span } from "./Typography"
 
 interface Event {
   title: string
@@ -36,7 +36,7 @@ const EventsSection = ({ eventsTitle, events }: EventsSectionProps) => {
               <div className="w-8 h-8 bg-frenchRed rounded-full border-2 border-white"></div>
               <div className="w-8 h-8 bg-gold rounded-full border-2 border-white"></div>
             </div>
-            <span className="text-sm text-gray-600 font-medium pr-4">Join 100+ active members</span>
+            <Span className="text-sm text-gray-600 font-medium pr-4">Join 100+ active members</Span>
           </div>
         </div>
 
@@ -58,7 +58,7 @@ const EventsSection = ({ eventsTitle, events }: EventsSectionProps) => {
             href="/Events"
             className="relative group inline-block bg-frenchBlue text-white font-semibold py-4 px-10 rounded-xl hover:bg-blue-800 transition-all duration-300 shadow-xl transform hover:scale-105 border-b-4 border-blue-900"
           >
-            <span className="relative z-10">View All Events</span>
+            <Span className="relative z-10">View All Events</Span>
             <div className="absolute inset-0 bg-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
         </div>
