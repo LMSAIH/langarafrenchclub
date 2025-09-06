@@ -5,8 +5,9 @@ import { useState, useEffect } from "react"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import DetailedEvent from "../components/DetailedEvent"
-import type { Event } from "../types/event"
+import WaveSeparator from "../components/WaveSeparator"
 import EventsContent from "../PageContent/EventsContent"
+import { H1 } from "../components/Typography"
 import { useLanguage } from "../context/LanguageContext"
 const inter = Inter({
   subsets: ["latin"],
@@ -24,66 +25,69 @@ export default function Events() {
 
   useEffect(() => {
     AOS.init({
-      duration: 300,
-      once: true,
+      duration: 600,
+      once: false,
+      offset: 100,
     });
   }, []);
 
   useEffect(() => {
-  
     setFilter(content.categories[0]);
     setFilteredEvents(content.events);
   }, [language]);
 
   useEffect(() => {
-   
     if (filter === content.categories[0]) {
       setFilteredEvents(content.events);
     } else {
       setFilteredEvents(content.events.filter((event) => event.category === filter));
     }
+    // Refresh AOS when events change
+    setTimeout(() => {
+      AOS.refresh();
+    }, 100);
   }, [filter, content]);
 
   return (
-    <div className={`${inter.className} min-h-screen`}>
-      <div className="relative h-64 bg-blue-900">
-        <svg
-          className="absolute bottom-0 w-full h-24 -mb-1 text-white"
-          preserveAspectRatio="none"
-          viewBox="0 0 1440 54"
-        >
-          <path
-            fill="currentColor"
-            d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
-          ></path>
-        </svg>
-      </div>
+    <div className={`${inter.className} min-h-screen mx-auto`}>
+      <div className="relative h-16 sm:h-24 bg-blue-900" />
+      <WaveSeparator className=" " variant="up" />
 
-      <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="w-full mx-auto">
-          <h1
-            className={`${inter.className} french-accent 4xl:text-8xl text-center text-4xl md:text-5xl font-bold text-blue-900 mb-16`}
-            data-aos="fade-down"
-          >
-            {content.title}
-          </h1>
-
-          <div className="mb-8 flex flex-wrap justify-center gap-4" data-aos="fade-up">
-            {content.categories.map((category, index) => (
-              <button
-                key={index}
-                onClick={() => setFilter(category)}
-                className={`px-4 py-2 rounded-full text-sm 4xl:text-4xl 4xl:px-8 4xl:py-4 font-medium transition-colors duration-300 ${filter === category ? "bg-red-600 text-white" : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+      <div className="bg-white py-20 4xl:py-32 px-4 sm:px-6 lg:px-8 mx-auto">
+        <div className="max-w-7xl 4xl:max-w-[100rem] mx-auto">
+          <div className="text-center mb-16 4xl:mb-24">
+            <H1 
+              className="mb-6 4xl:mb-12 text-frenchBlue" 
+              data-aos="fade-down"
+              data-aos-delay="100"
+            >
+              {content.title}
+            </H1>
+            
+            <div className="mb-12 4xl:mb-20 flex flex-wrap justify-center gap-3 4xl:gap-6" data-aos="fade-up" data-aos-delay="200">
+              {content.categories.map((category, index) => (
+                <button
+                  key={index}
+                  onClick={() => setFilter(category)}
+                  className={`px-6 py-3 4xl:px-12 4xl:py-6 rounded-full text-sm 4xl:text-2xl font-medium transition-all duration-300 border-2 ${
+                    filter === category 
+                      ? "bg-frenchBlue text-white border-frenchBlue shadow-md" 
+                      : "bg-white text-gray-700 border-gray-200 hover:border-frenchBlue hover:text-frenchBlue hover:shadow-sm"
                   }`}
-              >
-                {category}
-              </button>
-            ))}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="flex flex-wrap justify-center items-stretch gap-8">
+          <div 
+            className="flex flex-wrap justify-center gap-6 mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             {[...filteredEvents].reverse().map((event, index) => (
-              <div key={event.id} className="w-full sm:1/3 lg:w-1/5 flex">
+              <div key={`${event.id}-${filter}`} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] xl:w-[calc(25%-1.125rem)]">
                 <DetailedEvent event={event} index={index} />
               </div>
             ))}
@@ -91,18 +95,8 @@ export default function Events() {
         </div>
       </div>
 
-      <div className="relative h-48 bg-white">
-        <svg
-          className="absolute bottom-0 w-full h-48 -mb-1 text-blue-900"
-          preserveAspectRatio="none"
-          viewBox="0 0 1440 54"
-        >
-          <path
-            fill="currentColor"
-            d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
-          ></path>
-        </svg>
-      </div>
+      <WaveSeparator variant="down" />
+      <div className=" h-16 sm:h-24 bg-blue-900 border-b-4 pb-0 mb-0 border-blue-900" />
     </div>
   )
 }

@@ -102,7 +102,7 @@ const Members = () => {
         </div>
       </div>
 
-      <WaveSeparator variant="down"  />
+      <WaveSeparator variant="down" />
       <div className=" h-16 sm:h-24 bg-blue-900 border-b-4 pb-0 mb-0 border-blue-900" />
 
     </div>

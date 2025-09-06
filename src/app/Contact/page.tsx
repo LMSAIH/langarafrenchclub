@@ -10,6 +10,7 @@ import Link from "next/link"
 import contactContent from "../PageContent/ContactContent"
 import AOS from "aos"
 import "aos/dist/aos.css"
+import { Span } from "../components/Typography"
 
 
 const inter = Inter({
@@ -69,12 +70,12 @@ export default function Contact() {
                 <div className="flex flex-col gap-y-6">
                   <div className="flex items-center">
                     <BsPinMap className="text-yellow-700 mr-4 4xl:size-20" />
-                    <span className="4xl:text-4xl">{content.contactInfo.address}</span>
+                    <Span className="4xl:text-4xl">{content.contactInfo.address}</Span>
                   </div>
                   <Link href="mailto:frenchclub.langara1@gmail.com" target="_blank" rel="noopener noreferrer">
                     <div className="flex items-center hover:cursor-pointer">
                       <SiGmail className="text-red-600 mr-4 4xl:size-20 " />
-                      <span className="4xl:text-4xl">{content.contactInfo.email}</span>
+                      <Span className="4xl:text-4xl">{content.contactInfo.email}</Span>
                     </div>
                   </Link>
                   <Link href="https://www.linkedin.com/company/langara-french-club/posts/?feedView=all"
@@ -82,7 +83,7 @@ export default function Contact() {
                     rel="noopener noreferrer">
                     <div className="flex items-center hover:cursor-pointer">
                       <BsLinkedin className="text-blue-900 mr-4 4xl:size-20 " />
-                      <span className="4xl:text-4xl">{content.contactInfo.linkedIn}</span>
+                      <Span className="4xl:text-4xl">{content.contactInfo.linkedIn}</Span>
                     </div>
                   </Link>
                   <Link href="https://discord.gg/9UQchagN43"
@@ -90,7 +91,7 @@ export default function Contact() {
                     rel="noopener noreferrer">
                     <div className="flex items-center hover:cursor-pointer">
                       <BsDiscord className="text-blue-900 mr-4 4xl:size-20 " />
-                      <span className="4xl:text-4xl">Discord</span>
+                      <Span className="4xl:text-4xl">Discord</Span>
                     </div>
                   </Link>
                   <Link href="https://www.instagram.com/leclubdefrancaislangara/"
@@ -98,7 +99,7 @@ export default function Contact() {
                     rel="noopener noreferrer" >
                     <div className="flex items-center hover:cursor-pointer">
                       <BsInstagram className="text-pink-500 mr-4 4xl:size-20" />
-                      <span className="4xl:text-4xl">leclubdefrancaislangara</span>
+                      <Span className="4xl:text-4xl">leclubdefrancaislangara</Span>
                     </div>
                   </Link>
                   <Link href="https://www.facebook.com/langara.french.club/"
@@ -106,7 +107,7 @@ export default function Contact() {
                     rel="noopener noreferrer">
                     <div className="flex items-center hover:cursor-pointer">
                       <BsFacebook className="text-blue-600 mr-4 4xl:size-20 " />
-                      <span className="4xl:text-4xl">langara french club</span>
+                      <Span className="4xl:text-4xl">langara french club</Span>
                     </div>
                   </Link>
                 </div>
