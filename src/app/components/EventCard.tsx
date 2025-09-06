@@ -2,7 +2,7 @@
 
 import type React from "react"
 import Link from "next/link"
-import { H3, P } from "./Typography"
+import { H3, P, Span } from "./Typography"
 import { ArrowRight } from "lucide-react"
 
 interface EventCardProps {
@@ -30,7 +30,7 @@ const EventCard: React.FC<EventCardProps> = ({ title, date, description, index =
             {/* Date section with enhanced styling */}
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-2">
-                <span className="text-sm font-medium text-frenchBlue">{date}</span>
+                <Span className="text-sm font-medium text-frenchBlue">{date}</Span>
               </div>
               <div className="transform group-hover:translate-x-1 transition-transform duration-300">
                <ArrowRight  className="w-5 h-5 text-frenchBlue" />
@@ -49,12 +49,12 @@ const EventCard: React.FC<EventCardProps> = ({ title, date, description, index =
 
             {/* Interactive CTA */}
             <div className="flex items-center justify-between">
-              <P 
+              <Span 
                 className="text-xs text-gray-500 font-medium hover:text-frenchBlue transition-colors duration-300"
      
               >
                 Learn More
-              </P>
+              </Span>
 
             </div>
           </div>
