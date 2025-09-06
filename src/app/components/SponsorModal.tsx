@@ -6,6 +6,7 @@ import { Fragment } from "react"
 import Image from "next/image"
 import type { Sponsor } from "../types/sponsor"
 import { X } from "lucide-react"
+import { Span } from "./Typography"
 
 interface SponsorModalProps {
   sponsor: Sponsor | null
@@ -32,9 +33,9 @@ const SponsorModal: React.FC<SponsorModalProps> = ({ sponsor, isOpen, onClose })
             <DialogPanel className="fixed inset-0 bg-black opacity-30" />
           </TransitionChild>
 
-          <span className="inline-block h-screen align-middle" aria-hidden="true">
+          <Span className="inline-block h-screen align-middle" aria-hidden="true">
             &#8203;
-          </span>
+          </Span>
 
           <TransitionChild
             as={Fragment}
