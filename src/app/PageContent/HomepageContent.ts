@@ -1,102 +1,50 @@
 const HomepageContent = {
     en: {
-      title: "Welcome to the Langara French Club",
-      aboutTitle: "What is the Langara French Club?",
-      aboutText:
-        "The Langara French Club is dedicated to creating a welcoming and warm environment for all levels of French learners from beginner to advanced. Our workshops and outings provide many opportunities for students to engage with French culture, food and language.",
-      eventsTitle: "Our Events",
-      events: [
+      title: "Welcome to Langara French Club",
+      aboutTitle: "About Us",
+      aboutText: "Join our vibrant community to learn French, explore culture, and make lasting connections.",
+      eventsTitle: "Recent Events",
+      contactTitle: "Get In Touch",
+      contactText: "Questions? We'd love to hear from you!",
+      contactButton: "Contact Us",
+      features: [
         {
-          title: "French Movie Night",
-          date: "June 15, 2023",
-          description: "Join us for a screening of 'Amélie', followed by a discussion in French.",
+          title: "Learn French",
+          description: "Practice and improve your French skills in a welcoming environment"
         },
         {
-          title: "French Cooking Workshop",
-          date: "June 22, 2023",
-          description: "Learn how to make authentic croissants and macarons.",
+          title: "Meet People",
+          description: "Connect with fellow French learners and native speakers"
         },
         {
-          title: "French Conversation",
-          date: "Every Tuesday",
-          description: "Practice your French in a relaxed setting with native speakers.",
-        },
-      ],
-      testimonialsTitle: "Testimonials",
-      testimonials: [
-        {
-          name:"Axel Velasquez",
-          role:"Computer Support Specialist",
-          content:"I love the French Club at Langara! It's a great way to meet new people and practice my French.",
-          avatar:"/CONSAR1.jpg"
-        },
-        {
-          name:"Fernando Salazar ",
-          role:"Langara College Instructor",
-          content:"I love the French Club at Langara! It's a great way to meet new people and practice my French.",
-          avatar:"/CONSAR1.jpg"
-        },
-        {
-          name:"Aurora Velasquez",
-          role:"Computer Support Specialist",
-          content:"I love the French Club at Langara! It's a great way to meet new people and practice my French.",
-          avatar:"/CONSAR1.jpg"
-        },
-      ],
-      contactTitle: "Contact Us",
-      contactText: "Have any questions? Feel free to reach out!",
-      contactButton: "Send Us an Email",
+          title: "French Culture",
+          description: "Experience authentic French culture, food, and traditions"
+        }
+      ]
     },
   
     fr: {
-      title: "Bienvenue au Club Français de Langara",
-      aboutTitle: "Qu'est-ce que le Club Français de Langara ?",
-      aboutText:
-        "Le club de français de Langara s'efforce de créer un environnement accueillant et chaleureux pour tous les niveaux d'apprentissage du français, du débutant au plus avancé. Nos ateliers et nos sorties offrent de nombreuses opportunités aux étudiants de s'intéresser à la culture, à la nourriture et à la langue française.",
-      eventsTitle: "Nos Événements",
-      events: [
+      title: "Bienvenue au Club Français Langara",
+      aboutTitle: "À Propos",
+      aboutText: "Rejoignez notre communauté dynamique pour apprendre le français, explorer la culture et créer des liens durables.",
+      eventsTitle: "Événements Récents",
+      contactTitle: "Nous Contacter",
+      contactText: "Des questions ? Nous serions ravis de vous entendre !",
+      contactButton: "Contactez-nous",
+      features: [
         {
-          title: "Soirée Cinéma Français",
-          date: "15 Juin 2023",
-          description:
-            "Rejoignez-nous pour une projection de 'Amélie', suivie d'une discussion en français.",
+          title: "Apprendre le Français",
+          description: "Pratiquez et améliorez vos compétences en français dans un environnement accueillant"
         },
         {
-          title: "Atelier de Cuisine Française",
-          date: "22 Juin 2023",
-          description: "Apprenez à préparer des croissants et des macarons authentiques.",
+          title: "Rencontrer des Gens",
+          description: "Connectez-vous avec d'autres apprenants français et des locuteurs natifs"
         },
         {
-          title: "Conversation en Français",
-          date: "Chaque Mardi",
-          description:
-            "Pratiquez votre français dans une ambiance décontractée avec des locuteurs natifs.",
-        },
-      ],
-      testimonialsTitle: "Témoignages",
-      testimonials: [
-        {
-          name:"Axel Velasquez",
-          role:"Computer Support Specialist",
-          content:"I love the French Club at Langara! It's a great way to meet new people and practice my French.",
-          avatar:"/CONSAR1.jpg"
-        },
-        {
-          name:"Fernando Salazar ",
-          role:"Langara College Instructor",
-          content:"I love the French Club at Langara! It's a great way to meet new people and practice my French.",
-          avatar:"/CONSAR1.jpg"
-        },
-        {
-          name:"Aurora Velasquez",
-          role:"Computer Support Specialist",
-          content:"I love the French Club at Langara! It's a great way to meet new people and practice my French.",
-          avatar:"/CONSAR1.jpg"
-        },
-      ],
-      contactTitle: "Contactez-nous",
-      contactText: "Vous avez des questions ? N'hésitez pas à nous contacter !",
-      contactButton: "Envoyez-nous un email",
+          title: "Culture Française",
+          description: "Découvrez la culture française authentique, la nourriture et les traditions"
+        }
+      ]
     },
   };
   

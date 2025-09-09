@@ -1,26 +1,88 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  content: [
+    darkMode: ["class"],
+    content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        backgroundPrimary: "#ECE9DD",
-        backgroundSecondary: "#3B4B78",
-        backgroundThird: "#B53B5C",
-        backgroundFourth: "#D0616B",
-        backgroundFifth: "#E3AF97",
-      },
-      screens: {
-        "3xl": "1920px",
-        "4xl": "2560px",
-        "5xl": "3840px",
-      },
-    },
+  	extend: {
+  		colors: {
+  			backgroundPrimary: '#ECE9DD',
+  			backgroundSecondary: '#3B4B78',
+  			backgroundThird: '#B53B5C',
+  			backgroundFourth: '#D0616B',
+  			backgroundFifth: '#E3AF97',
+  			frenchBlue: '#002654',
+  			frenchRed: '#ED2939',
+  			frenchWhite: '#FFFFFF',
+  			lavender: '#8A70D6',
+  			burgundy: '#800020',
+  			gold: '#FFD700',
+  			background: 'hsl(var(--background))',
+  			foreground: 'hsl(var(--foreground))',
+  			card: {
+  				DEFAULT: 'hsl(var(--card))',
+  				foreground: 'hsl(var(--card-foreground))'
+  			},
+  			popover: {
+  				DEFAULT: 'hsl(var(--popover))',
+  				foreground: 'hsl(var(--popover-foreground))'
+  			},
+  			primary: {
+  				DEFAULT: 'hsl(var(--primary))',
+  				foreground: 'hsl(var(--primary-foreground))'
+  			},
+  			secondary: {
+  				DEFAULT: 'hsl(var(--secondary))',
+  				foreground: 'hsl(var(--secondary-foreground))'
+  			},
+  			muted: {
+  				DEFAULT: 'hsl(var(--muted))',
+  				foreground: 'hsl(var(--muted-foreground))'
+  			},
+  			accent: {
+  				DEFAULT: 'hsl(var(--accent))',
+  				foreground: 'hsl(var(--accent-foreground))'
+  			},
+  			destructive: {
+  				DEFAULT: 'hsl(var(--destructive))',
+  				foreground: 'hsl(var(--destructive-foreground))'
+  			},
+  			border: 'hsl(var(--border))',
+  			input: 'hsl(var(--input))',
+  			ring: 'hsl(var(--ring))',
+  			chart: {
+  				'1': 'hsl(var(--chart-1))',
+  				'2': 'hsl(var(--chart-2))',
+  				'3': 'hsl(var(--chart-3))',
+  				'4': 'hsl(var(--chart-4))',
+  				'5': 'hsl(var(--chart-5))'
+  			}
+  		},
+		width: {
+			'8xl': '1920px',
+			'9xl': '2560px',
+			'10xl': '3840px'
+		},
+		maxWidth: {
+			'8xl': '1920px',
+			'9xl': '2560px',
+			'10xl': '3840px'
+		},
+		screens: {
+			'3xl': '1920px',
+			'4xl': '2560px',
+			'5xl': '3840px'
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		}
+  	}
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;

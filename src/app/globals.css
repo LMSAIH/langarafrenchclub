@@ -2,93 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body {
-  @apply bg-gray-100 overflow-x-hidden;
+body{
+  @apply overflow-x-hidden mx-auto max-w-9xl;
 }
 
-nav {
-  @apply w-screen min-h-40 h-fit bg-white border-b-backgroundSecondary border-b-4 flex flex-col justify-center rounded-lg fixed top-0 z-50 4xl:min-h-60 4xl:py-4;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 221 83% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 221 83% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 221 83% 20%;
+    --primary: 221 83% 20%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 220 100% 95%;
+    --secondary-foreground: 221 83% 20%;
+    --muted: 220 100% 95%;
+    --muted-foreground: 221 50% 40%;
+    --accent: 348 83% 47%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 20%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
 }
 
-.content {
-  @apply mt-40 overflow-hidden border-none;
-}
-
-.navbarContainer {
-  @apply flex flex-row justify-between w-full;
-}
-
-.logoContainer {
-  @apply px-4 py-2 4xl:w-1/12;
-}
-
-.logoContainer>img {
-  @apply w-full;
-}
-
-.hambNav {
-  @apply mt-auto mb-auto px-4 py-2;
-}
-
-.hambNav>svg {
-  @apply size-14;
-}
-
-.linkContainer{
-  @apply flex-row flex justify-center ;
-}
-
-.linkContainer>p{
-  @apply m-auto ml-2;
-}
-
-
-.linkIcon{
-  @apply m-auto size-10 4xl:size-20;
-}
-
-.closedNav {
-  @apply h-0 w-full overflow-hidden p-0 duration-500 ease-in-out hidden opacity-0;
-}
-
-.openNav {
-  @apply h-fit w-full p-2 duration-500 ease-in-out block overflow-auto opacity-100;
-}
-
-.mobileNavigation {
-  @apply flex justify-center w-full border-t-2 border-t-gray-200 rounded-lg;
-}
-
-.mobileLinkContainer {
-  @apply flex flex-col gap-8 mt-4 mb-4;
-}
-
-.mobileLinkContainer>a {
-  @apply text-lg;
-}
-
-.computerNavigation {
-  @apply my-auto px-4 py-2 mr-12 ;
-}
-
-.computerLinkContainer {
-  @apply flex flex-row text-xl gap-x-8;
-}
-
-.computerLinkContainer>a {
-  @apply 2xl:text-lg p-2 4xl:text-4xl;
-}
-
-.computerLinkContainer>a:hover {
-  @apply text-orange-500 duration-300 -translate-y-1;
-}
-
-.french-border {
-  border-left: 4px solid #002654;
-  border-right: 4px solid #ED2939;
-}
-
-.card-shadow {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
