@@ -11,7 +11,7 @@ import contactContent from "../PageContent/ContactContent"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import { Span } from "../components/Typography"
-
+import WaveSeparator from "../components/WaveSeparator"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,11 +19,6 @@ const inter = Inter({
   weight: ["400", "500", "700"],
 })
 
-type FormInputs = {
-  name: string
-  email: string
-  message: string
-}
 
 export default function Contact() {
 
@@ -40,18 +35,9 @@ export default function Contact() {
 
   return (
     <div className={`${inter.className} `}>
-      <div className="relative h-64 bg-blue-900">
-        <svg
-          className="absolute bottom-0 w-full h-24 -mb-1 text-white"
-          preserveAspectRatio="none"
-          viewBox="0 0 1440 54"
-        >
-          <path
-            fill="currentColor"
-            d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
-          ></path>
-        </svg>
-      </div>
+
+      <div className="relative h-16 sm:h-24 bg-blue-900" />
+      <WaveSeparator className=" " variant="up" />
 
       <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl 4xl:max-w-full 4xl:w-3/4 mx-auto">
@@ -129,18 +115,8 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="relative h-48 bg-white">
-        <svg
-          className="absolute bottom-0 w-full h-48 -mb-1 text-blue-900"
-          preserveAspectRatio="none"
-          viewBox="0 0 1440 54"
-        >
-          <path
-            fill="currentColor"
-            d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
-          ></path>
-        </svg>
-      </div>
+      <WaveSeparator variant="down" />
+      <div className=" h-16 sm:h-24 bg-blue-900 border-b-4 pb-0 mb-0 border-blue-900" />
     </div>
   )
 }

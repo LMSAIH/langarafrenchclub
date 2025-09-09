@@ -29,7 +29,7 @@ const Members = () => {
 
   return (
     <div className={`${inter.className} min-h-screen bg-white`}>
-      {/* Hero Section */}
+      
       <div className="relative h-16 sm:h-24 bg-blue-900" />
       <WaveSeparator className=" " variant="up" />
 
