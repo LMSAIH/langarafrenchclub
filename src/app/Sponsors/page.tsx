@@ -9,6 +9,8 @@ import SponsorModal from "../components/SponsorModal"
 import type { Sponsor } from "../types/sponsor"
 import { useLanguage } from "../context/LanguageContext"
 import sponsorsContent from "../PageContent/SponsorsContent"
+import WaveSeparator from "../components/WaveSeparator"
+import { H1, H2, P } from "../components/Typography"
 
 
 const inter = Inter({
@@ -32,56 +34,85 @@ export default function Sponsors() {
 
   return (
     <div className={`${inter.className} min-h-screen`}>
-      <div className="relative h-64 bg-blue-900">
-        <svg
-          className="absolute bottom-0 w-full h-24 -mb-1 text-white"
-          preserveAspectRatio="none"
-          viewBox="0 0 1440 54"
-        >
-          <path
-            fill="currentColor"
-            d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
-          ></path>
-        </svg>
-      </div>
+
+      <div className="relative h-16 sm:h-24 bg-blue-900" />
+      <WaveSeparator variant="up" />
 
       <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl 4xl:max-w-full 4xl:w-3/4 mx-auto">
-          <h1
-            className={`${inter.className} french-accent text-center text-4xl 4xl:text-8xl md:text-5xl font-bold text-blue-900 mb-8`}
+          <H1
+            className="text-center mb-8 4xl:mb-16 text-frenchBlue"
             data-aos="fade-down"
           >
             {content.pageContent.title}
-          </h1>
+          </H1>
 
-          <p className="text-center text-xl text-gray-700 4xl:text-5xl mb-16" data-aos="fade-up">
+          <P className="text-center text-xl 4xl:text-5xl mb-16 4xl:mb-24 text-gray-700" data-aos="fade-up">
             {content.pageContent.description}
-          </p>
+          </P>
 
-          <p className="text-center text-lg 4xl:text-5xl mb-5 text-gray-600" data-aos="fade-up">
+          <P className="text-center text-lg 4xl:text-4xl mb-8 4xl:mb-12 text-gray-600" data-aos="fade-up">
             {content.pageContent.clickPrompt}
-          </p>
+          </P>
 
-          <div className="flex flex-wrap flex-row justify-center wrap gap-12 mb-16 w-full">
+          {/* Current Sponsors Section */}
+          <div className="mb-16 4xl:mb-24">
+            <H2 className="text-center mb-8 4xl:mb-12 text-frenchBlue" data-aos="fade-up">
+              {content.pageContent.currentSponsorsTitle}
+            </H2>
+            
+            <div className="flex flex-wrap justify-center gap-8 4xl:gap-12 w-full">
+              {content.currentSponsors.map((sponsor, index) => (
+                <div
+                  key={sponsor.id}
+                  className="bg-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer
+                             w-48 h-48 4xl:w-72 4xl:h-72"
+                  onClick={() => setSelectedSponsor(sponsor)}
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
+                >
+                  <div className="w-full h-full p-6 4xl:p-8 flex items-center justify-center">
+                    <Image
+                      src={sponsor.logo}
+                      alt={`${sponsor.name} logo`}
+                      width={120}
+                      height={120}
+                      className="object-contain max-w-full max-h-full 4xl:w-48 4xl:h-48 transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-            {content.sponsors.map((sponsor, index) => (
-              <div
-                key={sponsor.id}
-                className="w-3/4 md:w-1/3 flex justify-center items-center cursor-pointer transition-transform duration-300 hover:scale-110"
-                onClick={() => setSelectedSponsor(sponsor)}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <Image
-                  src={sponsor.logo}
-                  alt={`${sponsor.name} logo`}
-                  width={150}
-                  height={150}
-                  className="hover:scale-105 duration-300 w-full"
-                />
-              </div>
-            ))}
-
+          {/* Previous Sponsors Section */}
+          <div className="mb-16 4xl:mb-24">
+            <H2 className="text-center mb-8 4xl:mb-12 text-frenchBlue" data-aos="fade-up">
+              {content.pageContent.previousSponsorsTitle}
+            </H2>
+            
+            <div className="flex flex-wrap justify-center gap-8 4xl:gap-12 w-full">
+              {content.previousSponsors.map((sponsor, index) => (
+                <div
+                  key={sponsor.id}
+                  className="bg-white rounded-lg  transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer
+                             w-48 h-48 4xl:w-72 4xl:h-72 opacity-75 hover:opacity-100"
+                  onClick={() => setSelectedSponsor(sponsor)}
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
+                >
+                  <div className="w-full h-full p-6 4xl:p-8 flex items-center justify-center">
+                    <Image
+                      src={sponsor.logo}
+                      alt={`${sponsor.name} logo`}
+                      width={120}
+                      height={120}
+                      className="object-contain max-w-full max-h-full 4xl:w-48 4xl:h-48 transition-all duration-300 hover:scale-105"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
 
@@ -90,18 +121,8 @@ export default function Sponsors() {
 
       <SponsorModal sponsor={selectedSponsor} isOpen={!!selectedSponsor} onClose={() => setSelectedSponsor(null)} />
 
-      <div className="relative h-48 bg-white">
-        <svg
-          className="absolute bottom-0 w-full h-48 -mb-1 text-blue-900"
-          preserveAspectRatio="none"
-          viewBox="0 0 1440 54"
-        >
-          <path
-            fill="currentColor"
-            d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
-          ></path>
-        </svg>
-      </div>
+      <WaveSeparator variant="down" />
+      <div className=" h-16 sm:h-24 bg-blue-900 border-b-4 pb-0 mb-0 border-blue-900" />
     </div>
   )
 }
