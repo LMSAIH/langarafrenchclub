@@ -1,5 +1,4 @@
 
-import type { Metadata } from "next";
 import { LanguageProvider } from "./context/LanguageContext";
 import "./globals.css";
 import Nav from "./components/Nav";
@@ -22,7 +21,7 @@ export const metadata = {
   openGraph: {
     title: "Langara French Club | Vancouver, BC",
     description: "Experience French language and culture with the Langara French Club. Participate in workshops, movie nights, and culinary events to enrich your French learning journey.",
-    url: "https://langarafr.com/LFC_LOGO.png",
+    url: "https://langarafr.com/langara_french_club_hero.jpg",
     siteName: "Langara French Club",
     images: [
       {
