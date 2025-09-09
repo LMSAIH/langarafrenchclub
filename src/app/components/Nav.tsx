@@ -53,7 +53,7 @@ const Nav = () => {
 
                     {/* Logo */}
                     <div className="flex items-center">
-                        <Image src="/LFC_LOGO.png" alt="langara french club logo" width={120} height={120} className="w-auto h-8 lg:h-10 brightness-110" />
+                        <Image src="/lfc_logo_simplified.png" alt="langara french club logo" width={120} height={120} className="w-auto h-8 brightness-110" />
                     </div>
 
                     {/* Desktop Navigation */}
