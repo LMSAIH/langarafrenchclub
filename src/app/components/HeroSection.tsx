@@ -15,7 +15,7 @@ const HeroSection = ({ title, aboutText }: HeroSectionProps) => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/Langara_french_club.webp"
+          src="/Langara_french_club_hero.jpg"
           alt="Langara French Club"
           fill
           className="object-cover"
