@@ -29,7 +29,6 @@ const ContactSection = ({ contactTitle, contactText, contactButton }: ContactSec
           href="mailto:frenchclub@langara.ca"
           className="relative group inline-block bg-white text-frenchBlue font-semibold py-3 px-10 rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-xl transform hover:scale-105 border-b-4 border-gray-300"
           data-aos="fade-up"
-          data-aos-delay="150"
         >
           <Span className="relative z-10">{contactButton}</Span>
           <div className="absolute inset-0 bg-frenchBlue/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
