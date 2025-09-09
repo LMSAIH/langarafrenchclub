@@ -72,7 +72,8 @@ const HeroSection = ({ title, aboutText }: HeroSectionProps) => {
 
               <div className="relative">
                 <Link
-                  href="/Members"
+                target="_blank" rel="noopener noreferrer"
+                  href="https://discord.gg/9UQchagN43"
                   className="relative text-center group block w-64 sm:w-48 md:w-56 lg:w-64 mx-auto sm:mx-0 bg-white text-frenchBlue font-semibold py-5 px-8  rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-xl transform hover:scale-105 border-b-4 border-gray-300"
                 >
                   <Span className="relative z-10">Join Us</Span>

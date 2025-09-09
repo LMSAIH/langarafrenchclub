@@ -21,13 +21,13 @@ const EventsSection = ({ eventsTitle, events }: EventsSectionProps) => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <H2
-            className="text-gray-900 mb-4"
+            className="text-frenchBlue mb-4"
             data-aos="fade-up"
           >
             {eventsTitle}
           </H2>
           <div
-            className="inline-flex items-center space-x-4 bg-gray-50 rounded-full p-2 mb-8"
+            className="inline-flex items-center space-x-4 bg-gray-100 rounded-full p-2 mb-8"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -36,7 +36,7 @@ const EventsSection = ({ eventsTitle, events }: EventsSectionProps) => {
               <div className="w-8 h-8 bg-frenchRed rounded-full border-2 border-white"></div>
               <div className="w-8 h-8 bg-gold rounded-full border-2 border-white"></div>
             </div>
-            <Span className="text-sm text-gray-600 font-medium pr-4">Join 100+ active members</Span>
+            <Span className="text-sm text-black font-medium pr-4">Join 100+ active members</Span>
           </div>
         </div>
 

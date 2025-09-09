@@ -2,15 +2,14 @@
 
 import { Inter } from "next/font/google"
 import { useEffect } from "react"
-import { MailPlusIcon } from "lucide-react"
-import { BsDiscord, BsInstagram, BsFacebook, BsPinMap, BsLinkedin } from "react-icons/bs"
-import { SiGmail } from "react-icons/si";
+import { Mail, MapPin, Users } from "lucide-react"
+import { BsDiscord, BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs"
 import { useLanguage } from "../context/LanguageContext"
 import Link from "next/link"
 import contactContent from "../PageContent/ContactContent"
 import AOS from "aos"
 import "aos/dist/aos.css"
-import { Span } from "../components/Typography"
+import { H1, H3, Span } from "../components/Typography"
 import WaveSeparator from "../components/WaveSeparator"
 
 const inter = Inter({
@@ -19,9 +18,7 @@ const inter = Inter({
   weight: ["400", "500", "700"],
 })
 
-
 export default function Contact() {
-
   const { language } = useLanguage();
   const content = contactContent[language];
 
@@ -32,92 +29,82 @@ export default function Contact() {
     })
   }, [])
 
-
   return (
-    <div className={`${inter.className} `}>
-
+    <div className={`${inter.className}`}>
       <div className="relative h-16 sm:h-24 bg-blue-900" />
-      <WaveSeparator className=" " variant="up" />
+      <WaveSeparator variant="up" />
 
-      <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+      <div className="bg-white py-20  px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl 4xl:max-w-full 4xl:w-3/4 mx-auto">
-          <h1
-            className={`${inter.className} french-accent text-center text-4xl md:text-5xl 4xl:text-8xl font-bold text-blue-900 mb-8`}
+          <H1
+            className="text-center mb-16 text-frenchBlue"
             data-aos="fade-down"
           >
             {content.title}
-          </h1>
+          </H1>
 
-          <div className="flex flex-wrap justify-center -mx-4">
+          <div className="flex justify-center">
+            <div className="text-center" data-aos="fade-up">
 
-            <div className="w-full lg:w-1/2 px-4" data-aos="fade-left">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6 4xl:text-8xl">{content.contactInfo.heading}</h2>
-                <div className="flex flex-col gap-y-6">
-                  <div className="flex items-center">
-                    <BsPinMap className="text-yellow-700 mr-4 4xl:size-20" />
-                    <Span className="4xl:text-4xl">{content.contactInfo.address}</Span>
+              {/* Contact Icons */}
+              <div className="flex justify-center items-center gap-8 4xl:gap-12 mb-16 flex-wrap">
+                <Link href="mailto:frenchclub.langara1@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <div className="p-4 4xl:p-6 rounded-full bg-red-50 hover:bg-red-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <Mail className="text-red-600 w-6 h-6 4xl:w-10 4xl:h-10" />
                   </div>
-                  <Link href="mailto:frenchclub.langara1@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <div className="flex items-center hover:cursor-pointer">
-                      <SiGmail className="text-red-600 mr-4 4xl:size-20 " />
-                      <Span className="4xl:text-4xl">{content.contactInfo.email}</Span>
-                    </div>
-                  </Link>
-                  <Link href="https://www.linkedin.com/company/langara-french-club/posts/?feedView=all"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <div className="flex items-center hover:cursor-pointer">
-                      <BsLinkedin className="text-blue-900 mr-4 4xl:size-20 " />
-                      <Span className="4xl:text-4xl">{content.contactInfo.linkedIn}</Span>
-                    </div>
-                  </Link>
-                  <Link href="https://discord.gg/9UQchagN43"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <div className="flex items-center hover:cursor-pointer">
-                      <BsDiscord className="text-blue-900 mr-4 4xl:size-20 " />
-                      <Span className="4xl:text-4xl">Discord</Span>
-                    </div>
-                  </Link>
-                  <Link href="https://www.instagram.com/leclubdefrancaislangara/"
-                    target="_blank"
-                    rel="noopener noreferrer" >
-                    <div className="flex items-center hover:cursor-pointer">
-                      <BsInstagram className="text-pink-500 mr-4 4xl:size-20" />
-                      <Span className="4xl:text-4xl">leclubdefrancaislangara</Span>
-                    </div>
-                  </Link>
-                  <Link href="https://www.facebook.com/langara.french.club/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <div className="flex items-center hover:cursor-pointer">
-                      <BsFacebook className="text-blue-600 mr-4 4xl:size-20 " />
-                      <Span className="4xl:text-4xl">langara french club</Span>
-                    </div>
-                  </Link>
-                </div>
+                </Link>
 
-                <div className="mt-8">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4 4xl:text-4xl">Join our mailing list</h3>
-                  <div >
-                    <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfI8ucawpQ2ZpJb48uqjNDl8DZatPG5OaagYXfc9dpiZc_Tow/viewform" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 duration-300">
-                      <div className="flex flex-row m-auto">
-                        <MailPlusIcon className="text-blue-600 mr-4 4xl:size-20" />
-                        <p className="text-sm text-gray-600 hover:text-blue-600 4xl:text-md"> Click here to join the list </p>
-                      </div>
-                    </Link>
+                <Link href="https://www.linkedin.com/company/langara-french-club/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+                  <div className="p-4 4xl:p-6 rounded-full bg-blue-50 hover:bg-blue-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <BsLinkedin className="text-blue-700 w-6 h-6 4xl:w-10 4xl:h-10" />
                   </div>
+                </Link>
+
+                <Link href="https://discord.gg/9UQchagN43" target="_blank" rel="noopener noreferrer">
+                  <div className="p-4 4xl:p-6 rounded-full bg-indigo-50 hover:bg-indigo-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <BsDiscord className="text-indigo-600 w-6 h-6 4xl:w-10 4xl:h-10" />
+                  </div>
+                </Link>
+
+                <Link href="https://www.instagram.com/leclubdefrancaislangara/" target="_blank" rel="noopener noreferrer">
+                  <div className="p-4 4xl:p-6 rounded-full bg-pink-50 hover:bg-pink-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <BsInstagram className="text-pink-600 w-6 h-6 4xl:w-10 4xl:h-10" />
+                  </div>
+                </Link>
+
+                <Link href="https://www.facebook.com/langara.french.club/" target="_blank" rel="noopener noreferrer">
+                  <div className="p-4 4xl:p-6 rounded-full bg-blue-50 hover:bg-blue-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <BsFacebook className="text-blue-600 w-6 h-6 4xl:w-10 4xl:h-10" />
+                  </div>
+                </Link>
+              </div>
+
+              {/* Mailing List */}
+              <div className="mt-16 " data-aos="fade-up" data-aos-delay="200">
+                <Link href="https://forms.office.com/r/Adgw7rHdzG" target="_blank" rel="noopener noreferrer">
+                  <div className="inline-flex items-center bg-frenchBlue hover:bg-blue-800 text-white px-8 py-4 4xl:px-16 4xl:py-8 rounded-full transition-all duration-300 hover:scale-105 cursor-pointer">
+                    <Users className="w-5 h-5 4xl:w-8 4xl:h-8 mr-3 4xl:mr-6" />
+                    <Span className="font-semibold text-base 4xl:text-2xl">Join our mailing list</Span>
+                  </div>
+                </Link>
+
+                {/* Disclaimer */}
+                <div className="mt-4 4xl:mt-8 max-w-sm mx-auto " data-aos="fade-up" data-aos-delay="300">
+                  <Span className="text-gray-500 text-sm mx-auto">
+                    {content.mailingListDisclaimer}
+                  </Span>
                 </div>
               </div>
+
             </div>
+
           </div>
+
         </div>
       </div>
 
       <WaveSeparator variant="down" />
-      <div className=" h-16 sm:h-24 bg-blue-900 border-b-4 pb-0 mb-0 border-blue-900" />
+      <div className="h-16 sm:h-24 bg-blue-900 border-b-4 pb-0 mb-0 border-blue-900" />
     </div>
   )
 }
-

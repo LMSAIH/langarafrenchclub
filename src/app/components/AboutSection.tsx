@@ -19,7 +19,7 @@ const AboutSection = ({ aboutTitle, features }: AboutSectionProps) => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <H2
-            className="text-gray-900 mb-8"
+            className="text-frenchBlue mb-8"
             data-aos="fade-up"
           >
             {aboutTitle}

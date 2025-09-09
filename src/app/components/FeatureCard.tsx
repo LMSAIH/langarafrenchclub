@@ -40,8 +40,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             className="w-24 h-24 object-contain"
           />
         </div>
-        <H3 className="text-gray-900 mb-2">{title}</H3>
-        <P className="text-gray-600">{description}</P>
+        <H3 className="text-frenchBlue mb-2">{title}</H3>
+        <P className="text-black">{description}</P>
       </div>
     </div>
   )

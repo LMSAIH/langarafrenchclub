@@ -47,12 +47,8 @@ export default function Sponsors() {
             {content.pageContent.title}
           </H1>
 
-          <P className="text-center text-xl 4xl:text-5xl mb-16 4xl:mb-24 text-gray-700" data-aos="fade-up">
+          <P className="text-center text-sm  mb-16  text-gray-700 max-w-4xl mx-auto" data-aos="fade-up">
             {content.pageContent.description}
-          </P>
-
-          <P className="text-center text-lg 4xl:text-4xl mb-8 4xl:mb-12 text-gray-600" data-aos="fade-up">
-            {content.pageContent.clickPrompt}
           </P>
 
           {/* Current Sponsors Section */}

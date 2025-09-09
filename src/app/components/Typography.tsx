@@ -25,7 +25,7 @@ export const H1 = ({ children, className = "" }: TypographyProps) => (
 );
 
 export const H2 = ({ children, className = "" }: TypographyProps) => (
-  <h2 className={`${poppins.className} text-3xl md:text-4xl font-bold ${className}`}>
+  <h2 className={`${poppins.className} text-3xl md:text-4xl 4xl:text-5xl font-bold ${className}`}>
     {children}
   </h2>
 );
