@@ -217,7 +217,7 @@ const EventsContent = {
         date: "10 juillet 2025",
         description: "En collaboration avec le programme Explore, rencontrez des étudiants de villes francophones autour de croissants, de jeux et de divertissements !",
         imageUrl: `${eventsPath}/picnic_event.webp`,
-        category: "Community",
+        category: "Communauté",
       }
     ]
   }
