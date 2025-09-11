@@ -92,6 +92,22 @@ const EventsContent = {
         description: "A social gathering at Festival du Bois to meet and chat in French!",
         imageUrl: `${eventsPath}/6franco8_event.webp`,
         category: "Community",
+      },
+      {
+        id: 12,
+        title: "Sip and Paint",
+        date: "March 21, 2025",
+        description: "Unwind with a glass of wine and create your own masterpiece while practicing French!",
+        imageUrl: `${eventsPath}/sipandpaint_event.webp`,
+        category: "Culture",
+      },
+      {
+        id: 13,
+        title: "Pique-Nique sur la Pelouse",
+        date: "July 10, 2025",
+        description: "In collaboration with the Explore program, meet students from francophone cities over croissants, games, and fun!",
+        imageUrl: `${eventsPath}/picnic_event.webp`,
+        category: "Community",
       }
     ]
   },
@@ -185,6 +201,22 @@ const EventsContent = {
         date: "7 mars 2025",
         description: "Un rassemblement social au Festival du Bois pour discuter en français !",
         imageUrl: `${eventsPath}/6franco8_event.webp`,
+        category: "Communauté",
+      },
+      {
+        id: 12,
+        title: "Siroter et peindre",
+        date: "21 mars 2025",
+        description: "Détendez-vous avec un verre de vin et créez votre propre chef-d'œuvre tout en pratiquant le français !",
+        imageUrl: `${eventsPath}/sipandpaint_event.webp`,
+        category: "Culture",
+      },
+      {
+        id: 13,
+        title: "Pique-Nique sur la Pelouse",
+        date: "10 juillet 2025",
+        description: "En collaboration avec le programme Explore, rencontrez des étudiants de villes francophones autour de croissants, de jeux et de divertissements !",
+        imageUrl: `${eventsPath}/picnic_event.webp`,
         category: "Communauté",
       }
     ]
