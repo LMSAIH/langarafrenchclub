@@ -33,46 +33,10 @@ const MembersContent = {
     ],
     currentExecs: [
       {
-        name: "Alina U",
+        name: "Yannis Stefanyan",
         role: "Events Assistant",
-        bio: "Alina, our Events Assistant, is a dedicated and enthusiastic member of our team. She brings a fresh perspective and a keen eye for detail to every event she helps organize. Her passion for French culture and community engagement makes her an invaluable asset to our club.",
-        imageUrl: `${currentExecPath}/alina.webp`,
-      },
-      {
-        name: "Angela Furlan",
-        role: "Events Assistant",
-        bio: "Angela, our Events Assistant, brings enthusiasm and creativity to the team. She is dedicated to organizing engaging events that foster community spirit and cultural appreciation among members.",
-        imageUrl: `${currentExecPath}/angela.webp`,
-      },
-      {
-        name: "Elliott Schmechel",
-        role: "IT Assistant",
-        bio: "Elliott, our IT Assistant, is a tech-savvy and resourceful member of our team. He plays a crucial role in managing our digital platforms and ensuring smooth technical operations. His passion for technology and problem-solving skills make him an invaluable asset to our club.",
-        imageUrl: `${currentExecPath}/elliott.webp`,
-      },
-      {
-        name: "Ikpreet Singh",
-        role: "Events Assistant",
-        bio: "Ikpreet, our Events Assistant, is a dedicated and enthusiastic member of our team. He brings a fresh perspective and a keen eye for detail to every event he helps organize. His passion for French culture and community engagement makes him an invaluable asset to our club.",
-        imageUrl: `${currentExecPath}/ikpreet.webp`,
-      },
-      {
-        name: "Jodie Markin",
-        role: "Events Assistant",
-        bio: "Jodie, our Events Assistant, is a passionate and energetic member of our team. She brings a unique blend of creativity and organization to every event she helps plan. Her dedication to promoting French culture and fostering a sense of community makes her an invaluable asset to our club.",
-        imageUrl: `${currentExecPath}/jodie.webp`,
-      },
-      {
-        name: "Juan Aristizabal",
-        role: "Events & IT Assistant",
-        bio: "Juan, our Events & IT Assistant, is a dedicated and enthusiastic member of our team. He brings a fresh perspective and a keen eye for detail to every event he helps organize. His passion for French culture and community engagement makes him an invaluable asset to our club.",
-        imageUrl: `${currentExecPath}/juan.webp`,
-      },
-      {
-        name: "Marina",
-        role: "Marketing Assistant",
-        bio: "Marina, our Marketing Assistant, is a creative and driven member of our team. She plays a key role in promoting our events and engaging with our community. Her passion for French culture and innovative ideas help us reach new audiences and make a lasting impact.",
-        imageUrl: `${currentExecPath}/marina.webp`,
+        bio: "Yannis, our Events Assistant, is now responsible for helping plan and coordinate club activities. His attention to detail and positive energy ensure every event is a success.",
+        imageUrl: `${currentExecPath}/yanis.webp`,
       },
       {
         name: "Scarlett Abagi",
@@ -80,25 +44,12 @@ const MembersContent = {
         bio: "As the Marketing Assistant of the Langara French Club, Scarlett Abagi is the creative spark behind our captivating campaigns. With an eye for innovative design and a passion for French culture, she crafts engaging materials that draw new members and energize our community. Her fresh perspective and strategic approach ensure that every initiative resonates with our vibrant spirit.",
         imageUrl: `${currentExecPath}/scarlett.webp`,
       },
-      {
-        name: "Taufiq Gill",
-        role: "Events Assistant",
-        bio: "Taufiq, our Events Assistant, is a dedicated and enthusiastic member of our team. She brings a fresh perspective and a keen eye for detail to every event she helps organize. Her passion for French culture and community engagement makes her an invaluable asset to our club.",
-        imageUrl: `${currentExecPath}/taufiq.webp`,
-      },
-      {
-        name: "Yannis Stefanyan",
-        role: "Events Assistant",
-        bio: "Yannis, our Events Assistant, is now responsible for helping plan and coordinate club activities. His attention to detail and positive energy ensure every event is a success.",
-        imageUrl: `${currentExecPath}/yanis.webp`,
-      }
-      
     ],
     oldExecs: [
       {
         name: "Amar Ulziisaikhan",
         role: "President & co-founder",
-        bio: "As President of the club, Amar is our dynamic guiding force who helped lay the very foundation of our club. With his disciplined passion for jujutsu and his innovative mindset, Amar effortlessly blends strategic leadership with a spirit of adventure. Whether he's spearheading new initiatives or energizing members with his unique flair, Amar ensures our club remains as spirited and forward-thinking as ever.",
+        bio: "As President of the club, Amar is our dynamic guiding force who helped lay the very foundation of our club. With his disciplined passion for jujutsu and his innovative mindset, Amar effortlessly blends strategic leadership with a spirit of adventure. Whether he’s spearheading new initiatives or energizing members with his unique flair, Amar ensures our club remains as spirited and forward-thinking as ever.",
         imageUrl: `${currentExecPath}/amar.webp`,
       },
       {
@@ -171,65 +122,17 @@ const MembersContent = {
     ],
     currentExecs: [
       {
-        name: "Alina U",
-        role: "Assistante événements",
-        bio: "Alina, notre assistante événements, est un membre dévoué et enthousiaste de notre équipe. Elle apporte une perspective fraîche et un œil attentif aux détails à chaque événement qu'elle aide à organiser. Sa passion pour la culture française et l'engagement communautaire fait d'elle un atout inestimable pour notre club.",
-        imageUrl: `${currentExecPath}/alina.webp`,
-      },
-      {
-        name: "Angela Furlan",
-        role: "Assistante événements",
-        bio: "Angela, notre assistante événements, apporte enthousiasme et créativité à l'équipe. Elle se consacre à l'organisation d'événements engageants qui favorisent l'esprit communautaire et l'appréciation culturelle parmi les membres.",
-        imageUrl: `${currentExecPath}/angela.webp`,
-      },
-      {
-        name: "Elliott Schmechel",
-        role: "Assistant informatique",
-        bio: "Elliott, notre assistant informatique, est un membre féru de technologie et ingénieux de notre équipe. Il joue un rôle crucial dans la gestion de nos plateformes numériques et assure le bon fonctionnement des opérations techniques. Sa passion pour la technologie et ses compétences en résolution de problèmes font de lui un atout inestimable pour notre club.",
-        imageUrl: `${currentExecPath}/elliott.webp`,
-      },
-      {
-        name: "Ikpreet Singh",
-        role: "Assistant événements",
-        bio: "Ikpreet, notre assistant événements, est un membre dévoué et enthousiaste de notre équipe. Il apporte une perspective fraîche et un œil attentif aux détails à chaque événement qu'il aide à organiser. Sa passion pour la culture française et l'engagement communautaire fait de lui un atout inestimable pour notre club.",
-        imageUrl: `${currentExecPath}/ikpreet.webp`,
-      },
-      {
-        name: "Jodie Markin",
-        role: "Assistante événements",
-        bio: "Jodie, notre assistante événements, est un membre passionné et énergique de notre équipe. Elle apporte un mélange unique de créativité et d'organisation à chaque événement qu'elle aide à planifier. Son dévouement à promouvoir la culture française et à favoriser un sentiment de communauté fait d'elle un atout inestimable pour notre club.",
-        imageUrl: `${currentExecPath}/jodie.webp`,
-      },
-      {
-        name: "Juan Aristizabal",
-        role: "Assistant événements & informatique",
-        bio: "Juan, notre assistant événements et informatique, est un membre dévoué et enthousiaste de notre équipe. Il apporte une perspective fraîche et un œil attentif aux détails à chaque événement qu'il aide à organiser. Sa passion pour la culture française et l'engagement communautaire fait de lui un atout inestimable pour notre club.",
-        imageUrl: `${currentExecPath}/juan.webp`,
-      },
-      {
-        name: "Marina",
-        role: "Assistante marketing",
-        bio: "Marina, notre assistante marketing, est un membre créatif et motivé de notre équipe. Elle joue un rôle clé dans la promotion de nos événements et l'engagement avec notre communauté. Sa passion pour la culture française et ses idées innovantes nous aident à atteindre de nouveaux publics et à avoir un impact durable.",
-        imageUrl: `${currentExecPath}/marina.webp`,
-      },
-      {
-        name: "Scarlett Abagi",
-        role: "Assistante marketing",
-        bio: "En tant qu'assistante marketing du Langara French Club, Scarlett Abagi est l'étincelle créative derrière nos campagnes captivantes. Dotée d'un œil pour le design innovant et d'une passion pour la culture française, elle conçoit des supports engageants qui attirent de nouveaux membres et dynamisent notre communauté. Sa perspective novatrice et son approche stratégique garantissent que chaque initiative reflète l'esprit vibrant du club.",
-        imageUrl: `${currentExecPath}/scarlett.webp`,
-      },
-      {
-        name: "Taufiq Gill",
-        role: "Assistante événements",
-        bio: "Taufiq, notre assistante événements, est un membre dévoué et enthousiaste de notre équipe. Elle apporte une perspective fraîche et un œil attentif aux détails à chaque événement qu'elle aide à organiser. Sa passion pour la culture française et l'engagement communautaire fait d'elle un atout inestimable pour notre club.",
-        imageUrl: `${currentExecPath}/taufiq.webp`,
-      },
-      {
         name: "Yannis Stefanyan",
         role: "Assistant événements",
         bio: "Yannis, notre assistant événements, aide désormais à planifier et coordonner les activités du club. Son sens du détail et son énergie positive garantissent la réussite de chaque événement.",
         imageUrl: `${currentExecPath}/yanis.webp`,
-      }
+      },
+      {
+        name: "Scarlett Abagi",
+        role: "Assistante marketing ",
+        bio: "En tant qu'assistante marketing du Langara French Club, Scarlett Abagi est l'étincelle créative derrière nos campagnes captivantes. Dotée d'un œil pour le design innovant et d'une passion pour la culture française, elle conçoit des supports engageants qui attirent de nouveaux membres et dynamisent notre communauté. Sa perspective novatrice et son approche stratégique garantissent que chaque initiative reflète l'esprit vibrant du club.",
+        imageUrl: `${currentExecPath}/scarlett.webp`,
+      },
     ],
     oldExecs: [
       {
