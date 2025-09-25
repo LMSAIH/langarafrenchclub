@@ -39,7 +39,8 @@ const HeroSection = ({ title, aboutText }: HeroSectionProps) => {
               </H1>
             </div>
             <P
-              className="text-base sm:text-lg md:text-2xl text-white mb-6 sm:mb-8 drop-shadow-md max-w-full sm:max-w-[75%]"
+              className="text-base sm:text-lg md:text-2xl text-white mb-6 sm:mb-8 drop-shadow-md max-w-full sm:max-w-[75%]
+                         antialiased [backface-visibility:hidden] [will-change:transform]"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -53,6 +54,7 @@ const HeroSection = ({ title, aboutText }: HeroSectionProps) => {
               <div className="relative">
                 <Link
                   href="/Events"
+                  aria-label="View our Events"
                   className="relative text-center group block w-64 sm:w-48 md:w-56 lg:w-64 mx-auto sm:mx-0 bg-frenchBlue text-white font-semibold py-5 px-8  rounded-xl hover:bg-blue-800 transition-all duration-300 shadow-xl transform hover:scale-105 border-b-4 border-blue-900"
                 >
                   <Span className="relative z-10">View Events</Span>
@@ -74,6 +76,7 @@ const HeroSection = ({ title, aboutText }: HeroSectionProps) => {
                 <Link
                 target="_blank" rel="noopener noreferrer"
                   href="https://discord.gg/9UQchagN43"
+                  aria-label="Join our Discord server"
                   className="relative text-center group block w-64 sm:w-48 md:w-56 lg:w-64 mx-auto sm:mx-0 bg-white text-frenchBlue font-semibold py-5 px-8  rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-xl transform hover:scale-105 border-b-4 border-gray-300"
                 >
                   <Span className="relative z-10">Join Us</Span>
